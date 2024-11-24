@@ -22,7 +22,7 @@
 
 
               <a class="navbar-brand" href="/index.html">
-                    <img src="/Imagenes/logo.png" alt="Avatar Logo" class="img-fluid"> 
+                    <img src="Imagenes/index/logo.png" alt="Avatar Logo" class="img-fluid"> 
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -59,7 +59,91 @@
 
     </header>
 
-    <main class="bg-success" style="height: 80vh;">
+
+    <main class="container-fluid flex-column">
+
+    <section class="bg-success" style="height: 85vh;">
+        <div class=" container-fluid" style="height: 95%;">
+            <div class="row d-flex h-100">
+                <div class=" col-12 col-md-5 bg-danger h-100">
+                    <div class="d-flex flex-column h-100">
+                        
+                        <div class="bg-warning h-25">
+                            <h3 class="text-info">TE ESTABAMOS ESPERANDO</h3>             
+                            <p class="text-success" >INSCRÍBETE Y EMPIEZA A GANAR DESDE YA </p>
+                        </div>
+                        
+
+                        <div class="bg-white h-75">
+                            <form  class=" h-100 w-100 overflow-auto" style="font-size: small;" action="/paso1-Entrevista/irAEntrevista.html" name="inicioFormularioInscripcion"> <!--para efectos de probar la direccion de los botones no se considera el envio del formulario temporalmente-->
+                                      
+                                <div class="d-flex row" name="formularioNombre">
+                                    <label class=" col-12 col-md-2" for="email">Nombre:</label>                            
+                                    <div class="col-12 col-md-10 flex-grow-1">
+                                        <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" maxlength="70" required>
+                                    </div>    
+                                </div>
+        
+                                <div class="row d-flex" name="formularioRut">
+                                    <label class="col-md-2 col-12" for="rut">RUT:</label>
+                                    <div class="col-md-10 col-12 flex-grow-1">
+                                        <input type="text" class="form-control form-control-sm" id="rut" placeholder="12345678-0" name="rut" minlength="9" maxlength="10" 
+                                        pattern="\d{7,8}-[\dkK]" required>
+                                    </div>
+                                </div>
+        
+                                <div class="row d-flex" name="formularioEmail">
+                                    <label class="col-md-2 col-12" for="email">Email:</label>
+                                    <div class=" col-md-10 col-12 p-2 flex-grow-1">
+                                        <input type="email" class="form-control form-control-sm" id="email"  name="email" required>
+                                    </div>
+                                </div>
+        
+                                <div class=" row d-flex" name="contraseña">
+                                    <label class="col-md-2 col-12" for="pwd">Contraseña:</label>
+                                    <div class=" col-md-10 col-12 p-2 flex-grow-1">
+                                        <input type="password" class="form-control form-control-sm" id="clave" name="clave" minlength="8" 
+                                        maxlength="12" 
+                                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,12}" title="La contraseña debe tener entre 8 y 16 caracteres, al menos una letra mayúscula, una letra minúscula, un número y un símbolo (@, $, !, %, *, ?, &).
+                                        " required>
+                                    </div>
+                                </div>
+        
+                                <div class="row" name ="terminos">
+                                    <a name="formularioTerminosYCondiciones" class="link" href="https://www.google.cl">términos y condiciones</a>
+                                </div>   
+        
+                                <div name="formularioAceptacionTerminos" class=" row form-check mb-3">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="AceptoTerminos" required> Acepto término y condiciones
+                                    </label>
+                                </div>
+        
+                                <button name="btnInscripcionFormulario" type="submit" class=" row btn btn-primary" id="btnIncripcion">Inscribirme</button>
+                            </form>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class=" col-12 col-md-7 h-100">
+                    <div  name="inicioImagen" class="h-100 w-100">
+                        <img class="img-fluid h-100"  id="imgLogo" src="/Imagenes/index/indexInscripcion.png" alt="mujer inscribiendose en Kuzaw"> 
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+        <div class="row bg-success" style="height: 5%;"></div>
+    </section>
+
+    
+
+    <section class="bg-success" style="height: 80vh;">
         <div class=" container-fluid h-100">
             <div class="d-flex row h-100">
                 <div class=" col-12 col-md-5 bg-danger h-100">
@@ -74,49 +158,49 @@
                         <div class="bg-white h-75">
                             <form  class=" h-100 w-100 overflow-auto" style="font-size: small;" action="/paso1-Entrevista/irAEntrevista.html" name="inicioFormularioInscripcion"> <!--para efectos de probar la direccion de los botones no se considera el envio del formulario temporalmente-->
                                       
-                                <div class="d-flex" name="formularioNombre">
-                                    <label for="email">Nombre:</label>                            
-                                    <div class="p-2 flex-grow-1">
-                                        <input type="text" class="form-control" id="nombre" name="nombre" maxlength="70" required>
+                                <div class="d-flex row" name="formularioNombre">
+                                    <label class=" col-12 col-md-2" for="email">Nombre:</label>                            
+                                    <div class="col-12 col-md-10 flex-grow-1">
+                                        <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" maxlength="70" required>
                                     </div>    
                                 </div>
         
-                                <div class="d-flex" name="formularioRut">
-                                    <label for="rut">RUT:</label>
-                                    <div class="p-2 flex-grow-1">
-                                        <input type="text" class="form-control" id="rut" placeholder="12345678-0" name="rut" minlength="9" maxlength="10" 
+                                <div class="row d-flex" name="formularioRut">
+                                    <label class="col-md-2 col-12" for="rut">RUT:</label>
+                                    <div class="col-md-10 col-12 flex-grow-1">
+                                        <input type="text" class="form-control form-control-sm" id="rut" placeholder="12345678-0" name="rut" minlength="9" maxlength="10" 
                                         pattern="\d{7,8}-[\dkK]" required>
                                     </div>
                                 </div>
         
-                                <div class="d-flex" name="formularioEmail">
-                                        <label for="email">Email:</label>
-                                    <div class="p-2 flex-grow-1">
-                                        <input type="email" class="form-control" id="email"  name="email" required>
+                                <div class="row d-flex" name="formularioEmail">
+                                    <label class="col-md-2 col-12" for="email">Email:</label>
+                                    <div class=" col-md-10 col-12 p-2 flex-grow-1">
+                                        <input type="email" class="form-control form-control-sm" id="email"  name="email" required>
                                     </div>
                                 </div>
         
-                                <div class="d-flex" name="contraseña">
-                                        <label for="pwd">Contraseña:</label>
-                                    <div class="p-2 flex-grow-1">
-                                        <input type="password" class="form-control" id="clave" name="clave" minlength="8" 
+                                <div class=" row d-flex" name="contraseña">
+                                    <label class="col-md-2 col-12" for="pwd">Contraseña:</label>
+                                    <div class=" col-md-10 col-12 p-2 flex-grow-1">
+                                        <input type="password" class="form-control form-control-sm" id="clave" name="clave" minlength="8" 
                                         maxlength="12" 
                                         pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,12}" title="La contraseña debe tener entre 8 y 16 caracteres, al menos una letra mayúscula, una letra minúscula, un número y un símbolo (@, $, !, %, *, ?, &).
                                         " required>
                                     </div>
                                 </div>
         
-                                <div name ="terminos">
+                                <div class="row" name ="terminos">
                                     <a name="formularioTerminosYCondiciones" class="link" href="https://www.google.cl">términos y condiciones</a>
                                 </div>   
         
-                                <div name="formularioAceptacionTerminos" class="form-check mb-3">
+                                <div name="formularioAceptacionTerminos" class=" row form-check mb-3">
                                     <label class="form-check-label">
                                         <input class="form-check-input" type="checkbox" name="AceptoTerminos" required> Acepto término y condiciones
                                     </label>
                                 </div>
         
-                                <button name="btnInscripcionFormulario" type="submit" class="btn btn-primary" id="btnIncripcion">Inscribirme</button>
+                                <button name="btnInscripcionFormulario" type="submit" class=" row btn btn-primary" id="btnIncripcion">Inscribirme</button>
                             </form>
 
 
@@ -135,8 +219,12 @@
            
             </div>
         </div>
+    </section>
+
     </main>
-    <footer class="bg-warning"style="height: 5vh;">adasd</footer>
+
+
+    <!--footer class="bg-warning"style="height: 5vh;">adasd</footer-->
 
 
 
