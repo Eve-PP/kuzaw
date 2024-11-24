@@ -59,11 +59,11 @@
 
     </header>
 
-    <!--main class="bg-success" style="height: 80vh;">
+    <main class="bg-success" style="height: 80vh;">
         <div class=" container-fluid h-100">
             <div class="d-flex row h-100">
                 <div class=" col-12 col-md-5 bg-danger h-100">
-                    <div name="inicioInscripcion" class="col-12 col-md-5 d-flex flex-column h-100 w-100" >
+                    <div name="inicioInscripcion" class="col-12 col-md-5 d-flex flex-column overflow-hidden h-100 w-100" >
                         <div class="d-flex flex-column h-100 w-100">
                             <div class="d-flex flex-column h-25 ">
                                 <h1 class="text-info">TE ESTABAMOS ESPERANDO</h1>             
@@ -71,7 +71,7 @@
                             </div>
 
                             <div class="d-flex h-75">
-                                <form  class=" h-100 w-100 overflow-auto" action="/paso1-Entrevista/irAEntrevista.html" name="inicioFormularioInscripcion"> <--para efectos de probar la direccion de los botones no se considera el envio del formulario temporalmente->
+                                <form  class=" h-100 w-100 overflow-auto" action="/paso1-Entrevista/irAEntrevista.html" name="inicioFormularioInscripcion"> <!--para efectos de probar la direccion de los botones no se considera el envio del formulario temporalmente-->
                                 
                                 <div class="d-flex mb-3 mt-3" name="formularioNombre">
                                     <label for="email">Nombre:</label>                            
@@ -129,125 +129,7 @@
                 </div>
             </div>
         </div>
-    </main-->
-
-
-    <main class="bg-success" style="height: 80vh;">
-        <div class="container-fluid h-100">
-          <div class="row h-100">
-            <!-- Columna del formulario -->
-            <div class="col-12 col-md-5 bg-danger d-flex flex-column h-100">
-              <div class="d-flex flex-column flex-grow-1 p-4">
-                <!-- Encabezado del formulario -->
-                <div class="mb-4">
-                  <h1 class="text-info">TE ESTÁBAMOS ESPERANDO</h1>
-                  <p class="text-success fs-4">
-                    INSCRÍBETE Y EMPIEZA A GANAR DESDE YA
-                  </p>
-                </div>
-                
-                <!-- Contenedor del formulario -->
-                <form
-                  class="d-flex flex-column flex-grow-1 overflow-auto"
-                  action="/paso1-Entrevista/irAEntrevista.html"
-                  name="inicioFormularioInscripcion"
-                >
-                  <!-- Campos del formulario -->
-                  <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre:</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="nombre"
-                      name="nombre"
-                      maxlength="70"
-                      required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="rut" class="form-label">RUT:</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="rut"
-                      placeholder="12345678-0"
-                      name="rut"
-                      minlength="9"
-                      maxlength="10"
-                      pattern="\d{7,8}-[\dkK]"
-                      required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="email" class="form-label">Email:</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      name="email"
-                      required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="clave" class="form-label">Contraseña:</label>
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="clave"
-                      name="clave"
-                      minlength="8"
-                      maxlength="12"
-                      pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,12}"
-                      title="La contraseña debe tener entre 8 y 12 caracteres, al menos una letra mayúscula, una letra minúscula, un número y un símbolo (@, $, !, %, *, ?, &)."
-                      required
-                    />
-                  </div>
-                  <div>
-                    <a
-                      name="formularioTerminosYCondiciones"
-                      class="link"
-                      href="https://www.google.cl"
-                      >Términos y condiciones</a
-                    >
-                  </div>
-                  <div class="form-check mb-3">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      name="AceptoTerminos"
-                      required
-                    />
-                    <label class="form-check-label">Acepto términos y condiciones</label>
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn btn-primary mt-auto"
-                    id="btnIncripcion"
-                  >
-                    Inscribirme
-                  </button>
-                </form>
-              </div>
-            </div>
-      
-            <!-- Columna de la imagen -->
-            <div class="col-12 col-md-7 bg-light d-flex align-items-center justify-content-center">
-              <img
-                class="img-fluid"
-                id="imgLogo"
-                src="/Imagenes/inicioInscripcion.jpg"
-                alt="Mujer inscribiéndose"
-              />
-            </div>
-          </div>
-        </div>
-      </main>
-      
-
-
-
-
-
+    </main>
     <footer class="bg-warning"style="height: 5vh;">adasd</footer>
 
 
