@@ -62,7 +62,7 @@
 
     <main class="container-fluid flex-column">
 
-    <section class="bg-success" style="height: 85vh;">
+    <section name="indexInscripcion" class="bg-success" style="height: 85vh;">
         <div class=" container-fluid" style="height: 95%;">
             <div class="row d-flex h-100">
                 <div class=" col-12 col-md-5 bg-danger h-100">
@@ -143,88 +143,107 @@
 
     
 
-    <section class="bg-success" style="height: 80vh;">
-        <div class=" container-fluid h-100">
-            <div class="d-flex row h-100">
-                <div class=" col-12 col-md-5 bg-danger h-100">
-                    <div class="d-flex flex-column h-100">
-                        
-                        <div class="bg-warning h-25">
-                            <h3 class="text-info">TE ESTABAMOS ESPERANDO</h3>             
-                            <p class="text-success" >INSCRÍBETE Y EMPIEZA A GANAR DESDE YA </p>
-                        </div>
-                        
-
-                        <div class="bg-white h-75">
-                            <form  class=" h-100 w-100 overflow-auto" style="font-size: small;" action="/paso1-Entrevista/irAEntrevista.html" name="inicioFormularioInscripcion"> <!--para efectos de probar la direccion de los botones no se considera el envio del formulario temporalmente-->
-                                      
-                                <div class="d-flex row" name="formularioNombre">
-                                    <label class=" col-12 col-md-2" for="email">Nombre:</label>                            
-                                    <div class="col-12 col-md-10 flex-grow-1">
-                                        <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" maxlength="70" required>
-                                    </div>    
-                                </div>
-        
-                                <div class="row d-flex" name="formularioRut">
-                                    <label class="col-md-2 col-12" for="rut">RUT:</label>
-                                    <div class="col-md-10 col-12 flex-grow-1">
-                                        <input type="text" class="form-control form-control-sm" id="rut" placeholder="12345678-0" name="rut" minlength="9" maxlength="10" 
-                                        pattern="\d{7,8}-[\dkK]" required>
-                                    </div>
-                                </div>
-        
-                                <div class="row d-flex" name="formularioEmail">
-                                    <label class="col-md-2 col-12" for="email">Email:</label>
-                                    <div class=" col-md-10 col-12 p-2 flex-grow-1">
-                                        <input type="email" class="form-control form-control-sm" id="email"  name="email" required>
-                                    </div>
-                                </div>
-        
-                                <div class=" row d-flex" name="contraseña">
-                                    <label class="col-md-2 col-12" for="pwd">Contraseña:</label>
-                                    <div class=" col-md-10 col-12 p-2 flex-grow-1">
-                                        <input type="password" class="form-control form-control-sm" id="clave" name="clave" minlength="8" 
-                                        maxlength="12" 
-                                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,12}" title="La contraseña debe tener entre 8 y 16 caracteres, al menos una letra mayúscula, una letra minúscula, un número y un símbolo (@, $, !, %, *, ?, &).
-                                        " required>
-                                    </div>
-                                </div>
-        
-                                <div class="row" name ="terminos">
-                                    <a name="formularioTerminosYCondiciones" class="link" href="https://www.google.cl">términos y condiciones</a>
-                                </div>   
-        
-                                <div name="formularioAceptacionTerminos" class=" row form-check mb-3">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox" name="AceptoTerminos" required> Acepto término y condiciones
-                                    </label>
-                                </div>
-        
-                                <button name="btnInscripcionFormulario" type="submit" class=" row btn btn-primary" id="btnIncripcion">Inscribirme</button>
-                            </form>
-
-
-
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class=" col-12 col-md-7 bg-info h-100">
-                    <div  name="inicioImagen" class="h-100 w-100">
-                        <img class="img-fluid"  id="imgLogo" src="/Imagenes/inicioInscripcion.jpg" alt="mujer inscribiendose en Kuzaw"> 
-                    </div>
-                </div>
-           
+    <section name="indexInvitacion" class=" container-fluid bg-success" style="height: 100vh;">
+        <div class="row bg-danger" style="height: 85%;" >
+            <div class="col-md-7 col-12 bg-info" >
+                <img class="img-fluid h-100" src="/Imagenes/index/indexLibertad.png" alt="mujer estirando los brazos en libertad">
+            </div>
+            <div class="col-md-5 col-12 bg-success d-flex align-items-center">
+                <p class="fs-1 text-center"> Vuelve a ser el dueño de tu tiempo</p>
             </div>
         </div>
+        <div class="row bg-warning align-items-center text-center fs-4" style="height: 10%;">
+            <div class="col-3">
+                <p>FLEXIBILIDAD</p>
+            </div>
+            <div class="col-3">
+                <p>DINAMISMO</p>
+            </div>
+            <div class="col-3 ">
+                <p>SEGURIDAD</p>
+            </div>
+            <div class="col-3">
+                <p>EXITO</p>
+            </div>
+        </div>
+        
+      </section>
+  
+
+
+    <section name="indexServicios" class="container-fluid bg-info" style="height: 100vh;">
+        <div class="row text-center" style="height: 10%;">
+            <p class="h1">SERVICIOS</p>
+        </div>
+        <div class="row fs-3 text-center" style="height: 10%;">
+            <div class="col-md-3 col-12">
+                <p>PICKING</p>
+            </div>
+            <div class="col-md-3 col-12">
+                <p>SHOPPER</p>
+            </div>
+            <div class="col-md-3 col-12">
+                <p>DESPACHO</p>
+            </div>
+            <div class="col-md-3 col-12">
+                <p>REPOSICIÓN</p>
+            </div>
+        </div>
+        <div class="row" style="height: 40%;">
+            <div class="col-md-6 col-12 h-100">
+                <img class="img-fluid h-100 w-100" src="/Imagenes/index/indexServicio1.jpg" alt="computador con carrito de compras">
+            </div>
+            <div class="col-md-6 col-12">
+                <div class=" container-fluid d-flex flex-column align-items-center mt-5">
+                    <p class="fs-2">¿POR QUE INSCRIBIRME EN KÜZAW?</p>
+                    <p class="fs-4">PORQUE ES UNA PLATAFORMA HECHA PARA TI</p>
+                    <p>Estaremos para recibirte - enseñarte - informarte -ayudarte. Cada vez que tu lo quieras!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="height: 40%;">
+            <div class="col-md-6 col-12 h-100">
+                <img class="img-fluid h-100 w-100" src="/Imagenes/index/indexServicio2.jpg" alt="bolsas de compras">
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="container-fluid d-flex flex-column align-items-center mt-5">
+                    <p class="fs-2">SOMOS EXPERTOS</p>
+                    <p class="fs-4">Pretendemos devolver el valor del trabajo humano, con una fina selección y dedicación en la preparación y entrega de pedidos. Reflejo de las personas que trabajan felices.</p>
+                    <p>Poniendo el sello que nos diferencia de los proceso automatizados.</p>
+                </div>
+            </div>
+        </div>
+
+
     </section>
+
+
+
+
+    <section name="indexFortalezas" class="container-fluid bg-warning" style="height: 100vh;">
+        
+    </section>
+
+    <section name="indexProceso" class="container-fluid bg-warning" style="height: 100vh;">
+        
+    </section>
+
+    <section name="indexInformacion" class="container-fluid bg-warning" style="height: 100vh;">
+        
+    </section>
+
+    <section name="indexPreguntas" class="container-fluid bg-warning" style="height: 100vh;">
+        
+    </section>
+
+    
+
+
 
     </main>
 
 
-    <!--footer class="bg-warning"style="height: 5vh;">adasd</footer-->
+    <footer class=" container-fluid bg-danger" style="height: 25vh;">adasd</footer-->
 
 
 
