@@ -65,11 +65,12 @@
                 <div class=" col-12 col-md-5 bg-danger h-100">
                     <div name="inicioInscripcion" class="col-12 col-md-5 d-flex flex-column h-100 w-100" >
                         <div class="d-flex flex-column h-100 w-100">
-                            <div class="d-flex flex-column ">
+                            <div class="d-flex flex-column h-25 ">
                                 <h1 class="text-info">TE ESTABAMOS ESPERANDO</h1>             
                                 <p class="text-success fs-1" >INSCRÍBETE Y EMPIEZA A GANAR DESDE YA </p>    
                             </div>
-                            <form action="/paso1-Entrevista/irAEntrevista.html" name="inicioFormularioInscripcion"> <!--para efectos de probar la direccion de los botones no se considera el envio del formulario temporalmente-->
+                            <div class="d-flex h-75">
+                                <form action="/paso1-Entrevista/irAEntrevista.html" name="inicioFormularioInscripcion"> <!--para efectos de probar la direccion de los botones no se considera el envio del formulario temporalmente-->
                                 
                                 <div class="d-flex mb-3 mt-3" name="formularioNombre">
                                     <label for="email">Nombre:</label>                            
@@ -114,7 +115,8 @@
                                 </div>
         
                                 <button name="btnInscripcionFormulario" type="submit" class="btn btn-primary" id="btnIncripcion">Inscribirme</button>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
