@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="es-mx">
-<head>
-  <title>Inicio</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<head>
+    <title>Paso 1: Agendar entrevista</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <!-- Bootstrap CSS 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Bootstrap Datepicker CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
+       <!-- Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- jQuery (requerido para datepicker) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <!-- Bootstrap Datepicker JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    
+    
+    <style>
+      /* Estilo personalizado para el datepicker */
+      #datepicker {
+        font-size: 3rem; /* Ajusta el tamaño del texto */
+        
+      }
+  
+      .table-condensed {
+        background-color: bisque;
+        font-size: 2rem; /* Ajusta el tamaño de fuente */
+        border-radius: 10%; /* Bordes redondeados */
+        border: 0.5rem solid red; /* Borde rojo */
+      
+  
+      /* Asegura espacio entre el contenido y el borde
+      .table-condensed td, */
+      .table-condensed th {
+        padding: 0rem 2rem 0rem 2rem; /* Ajusta el espacio dentro de las celdas */
+        text-align: center; /* Alineación centrada del contenido */
+       
+      }
+    </style>
+  
+  
+  </head>
   
 
-
-</head>
-
-
-
-<body class=" container-fluid d-flex flex-column">
-    <header class="flex-grow-0 " style="height: 15vh;">
+<body class=" container-fluid flex-column min-vh-100">
+    <header class=" container-fluid flex-grow-0 " style="height: 15vh;">
         <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
             <div class="container-fluid">
 
 
-              <a class="navbar-brand" href="index.html">
-                    <img src="Imagenes/index/logo.png" alt="Avatar Logo" class="img-fluid"> 
+              <a class="navbar-brand" href="../index.html">
+                    <img src="../Imagenes/index/logo.png" alt="Avatar Logo" class="img-fluid"> 
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -30,10 +64,10 @@
               <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav ms-auto align-items-center fs-1">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">INICIO</a>
+                        <a class="nav-link" href="../index.html">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="quienesSomos.html">QUIENES SOMOS</a>
+                        <a class="nav-link" href="../quienesSomos.html">QUIENES SOMOS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link bi bi-whatsapp b fs-1" href="https://web.whatsapp.com/"></a>
@@ -42,8 +76,8 @@
                     <li class="dropdown me-5 pe-5">
                         <button class="nav-link bi bi-person-circle fs-1" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
                             <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="login.html">Iniciar Sesión</a></li>
-                                <li><a class="dropdown-item" href="index.html">Inscribirme</a></li>
+                                <li><a class="dropdown-item" href="../login.html">Iniciar Sesión</a></li>
+                                <li><a class="dropdown-item" href="../index.html">Inscribirme</a></li>
                             
                             </ul>
                     </li>
@@ -59,313 +93,134 @@
 
     </header>
 
-
-    <main class="container-fluid  d-flex flex-column">
-
-    <section name="indexInscripcion" class="container-fluid">
-        <div class=" row align-items-center" >
-            <div class="col-md-5" style="height: 85vh;">
-                <div class="row flex-column h-25">
-                    <h3 class="text-info">TE ESTABAMOS ESPERANDO</h3>
-                    <p class="text-success" >INSCRÍBETE Y EMPIEZA A GANAR DESDE YA </p>
+    <main class="container-fluid d-flex flex-column" style="height: 80vh;">
+        <div class="d-flex flex-column h-100">
+            
+            <div class="row align-items-center" style="height: 10vh;">
+                <div class="progress" >
+                    <div class="progress-bar bg-warning" style="width:20%">Paso 1</div>
+                    <!--<div class="progress-bar bg-warning" style="width:20%"></div>
+                    <div class="progress-bar bg-success" style="width:20%"></div>
+                    <div class="progress-bar bg-danger" style="width:20%"></div>
+                    <div class="progress-bar " style="width:20%"> </div>-->
                 </div>
-                    
+            </div>
 
-                <div class="row bg-white h-75">
-                    <form  class=" h-100 w-100" style="font-size: small;" action="/paso1-Entrevista/irAEntrevista.html" name="inicioFormularioInscripcion"> <!--para efectos de probar la direccion de los botones no se considera el envio del formulario temporalmente-->
-                                
-                        <div class="d-flex row" name="formularioNombre">
-                            <label class=" col-12 col-md-2" for="email">Nombre:</label>                            
-                            <div class="col-12 col-md-10 flex-grow-1">
-                                <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" maxlength="70" required>
-                            </div>    
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex flex-column h-100 justify-content-center">
+                        <div class="row text-center mb-5">
+                            <h2> Lo primero es lo primero,</h2>
+                            <h1> conozcamonos</h1>
                         </div>
-
-                        <div class="row d-flex" name="formularioRut">
-                            <label class="col-md-2 col-12" for="rut">RUT:</label>
-                            <div class="col-md-10 col-12 flex-grow-1">
-                                <input type="text" class="form-control form-control-sm" id="rut" placeholder="12345678-0" name="rut" minlength="9" maxlength="10" 
-                                pattern="\d{7,8}-[\dkK]" required>
-                            </div>
-                        </div>
-
-                        <div class="row d-flex" name="formularioEmail">
-                            <label class="col-md-2 col-12" for="email">Email:</label>
-                            <div class=" col-md-10 col-12 p-2 flex-grow-1">
-                                <input type="email" class="form-control form-control-sm" id="email"  name="email" required>
-                            </div>
-                        </div>
-
-                        <div class=" row d-flex" name="contraseña">
-                            <label class="col-md-2 col-12" for="pwd">Contraseña:</label>
-                            <div class=" col-md-10 col-12 p-2 flex-grow-1">
-                                <input type="password" class="form-control form-control-sm" id="clave" name="clave" minlength="8" 
-                                maxlength="12" 
-                                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,12}" title="La contraseña debe tener entre 8 y 16 caracteres, al menos una letra mayúscula, una letra minúscula, un número y un símbolo (@, $, !, %, *, ?, &).
-                                " required>
-                            </div>
-                        </div>
-
-                        <div class="row" name ="terminos">
-                            <a name="formularioTerminosYCondiciones" class="link" href="https://www.google.cl">términos y condiciones</a>
-                        </div>   
-
-                        <div name="formularioAceptacionTerminos" class=" row form-check mb-3">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="AceptoTerminos" required> Acepto término y condiciones
-                            </label>
-                        </div>
-
-                        <button name="btnInscripcionFormulario" type="submit" class=" row btn btn-primary" id="btnIncripcion">Inscribirme</button>
-                    </form>   
-                </div>
-            </div>
-            <div class="col-md-7">
-                <img class="img-fluid"  id="imgLogo" src="Imagenes/index/indexInscripcion.png" alt="mujer inscribiendose en Kuzaw"> 
-            </div>
-        </div>
-    </section>
-
-
-    <section name="indexInvitacion" class="container-fluid m-5" style="height: 100vh;">
-        <div class=" d-flex flex-column">
-            <div class="row" style="height: 90%;" >
-                <div class="col-md-7 col-12" >
-                    <img class="img-fluid h-100" src="Imagenes/index/indexLibertad.png" alt="mujer estirando los brazos en libertad">
-                </div>
-                <div class="col-md-5 col-12 d-flex align-items-center">
-                    <p class="fs-1 text-center"> Vuelve a ser el dueño de tu tiempo</p>
-                </div>
-            </div>
-            <div class="row align-items-center text-center fs-4" style="height: 10%;">
-                <div class="col-md-3">
-                    <p>FLEXIBILIDAD</p>
-                </div>
-                <div class="col-md-3">
-                    <p>DINAMISMO</p>
-                </div>
-                <div class="col-md-3 ">
-                    <p>SEGURIDAD</p>
-                </div>
-                <div class="col-md-3">
-                    <p>EXITO</p>
-                </div>
-            </div>
-        </div>
-    </section>
-  
-
-    <section name="indexServicios" class="container-fluid m-5" >
-        <div class="d-flex flex-column">
-            <div class="row text-center" style="height: 10%;">
-                <p class="h1">SERVICIOS</p>
-            </div>
-            <div class="row fs-3 text-center" style="height: 10%;">
-                <div class="col-md-3 col-12">
-                    <p>PICKING</p>
-                </div>
-                <div class="col-md-3 col-12">
-                    <p>SHOPPER</p>
-                </div>
-                <div class="col-md-3 col-12">
-                    <p>DESPACHO</p>
-                </div>
-                <div class="col-md-3 col-12">
-                    <p>REPOSICIÓN</p>
-                </div>
-            </div>
-            <div class="row" style="height: 40%;">
-                <div class="col-md-6 col-12 h-100">
-                    <img class="img-fluid h-100 w-100" src="./Imagenes/index/indexServicio1.jpg" alt="computador con carrito de compras">
-                </div>
-                <div class="col-md-6 col-12">
-                    <div class=" container-fluid d-flex flex-column align-items-center mt-5">
-                        <p class="fs-2">¿POR QUE INSCRIBIRME EN KÜZAW?</p>
-                        <p class="fs-4">PORQUE ES UNA PLATAFORMA HECHA PARA TI</p>
-                        <p>Estaremos para recibirte - enseñarte - informarte -ayudarte. Cada vez que tu lo quieras!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="height: 40%;">
-                <div class="col-md-6 col-12 h-100">
-                    <img class="img-fluid h-100 w-100" src="Imagenes/index/indexServicio2.jpg" alt="bolsas de compras">
-                </div>
-                <div class="col-md-6 col-12">
-                    <div class="container-fluid d-flex flex-column align-items-center">
-                        <p class="fs-2">SOMOS EXPERTOS</p>
-                        <p class="fs-5">Pretendemos devolver el valor del trabajo humano, con una fina selección y dedicación en la preparación y entrega de pedidos. Reflejo de las personas que trabajan felices.</p>
-                        <p>Poniendo el sello que nos diferencia de los proceso automatizados.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-
-
-    <section name="indexFortalezas" class="container-fluid m-5">
-       <div class="d-flex flex-column">
-        <div class="row text-center pt-3" style="height: 40%;">
-            <div class="col-2">
-                <p class="h1"></p>
-            </div>
-            <div class="col-8">
-                <p class="h1">"La principal diferencia entre el ser humano y las máquinas, radica en nuestra capacidad de desición lo que corresponde a una voluntad"</p>
-            </div>
-            <div class="col-2">
-                <p class="h1"></p>
-            </div>
-        </div>
-
-        <div class="row text-center pt-3 bg-light" style="height: 50%;">
-            <div class="col-md-3 col-12">
-                <div class="container-fluid d-flex flex-column">
-                    <p class="fs-3">SELECCIÓN</p>
-                    <p class="fs-5"> Busco los productos solicitados con el mayor cuidado y cariño.</p>
-                    <img class="img-fluid" src="./Imagenes/index/indexFortalesa1.png" alt="conjunto de frutas y verduras">
-                </div>
-            </div>
-            <div class="col-md-3 col-12">
-                <div class="container-fluid d-flex flex-column">
-                    <p class="fs-3">ATENCIÓN</p>
-                    <p class="fs-5">Me convierto en los ojos y las manos del cliente en la instalación</p>
-                    <img class="img-fluid" src="./Imagenes/index/indexFortalesa2.png" alt="conjunto de frutas y verduras">
-                </div>
-            </div>
-            <div class="col-md-3 col-12">
-                <div class="container-fluid d-flex flex-column">
-                    <p class="fs-3">EMPAQUE</p>
-                    <p class="fs-5">Me aseguro que el cliente reciba todo tal como yo quisiera hacerlo</p>
-                    <img class="img-fluid" src="./Imagenes/index/indexFortalesa3.png" alt="manos sellando una caja">
-                </div>
-            </div>
-            <div class="col-md-3 col-12">
-                <div class="container-fluid d-flex flex-column">
-                    <p class="fs-3">ENTREGA</p>
-                    <p class="fs-5"> Transporto y entrego el pedido con el mayor de los cuidados</p>
-                    <img class="img-fluid" src="./Imagenes/index/indexFortalesa4.png" alt="conjunto de frutas y verduras">
-                </div>
-            </div>
-        </div>
-
-        <div class="row text-center" style="height: 10%;">
-            <p class="fs-3">Y TODO DE LA MANO DE LOS MAYORES ESTANDARES DE CALIDAD</p>
-        </div>
-       </div>
-    </section>
-
-
-
-
-
-    <section name="indexProceso" class="container-fluid m-5">
-        <div class=" d-flex flex-column">
-            <div class="row" style="height: 10%;">
-                <p class="h1">Y COMO LO HACEMOS</p>
-            </div>
-            <div class="row" style="height: 90%;">
-                <div class="col-md-6 col-12">
-                    <div class="d-flex flex-column justify-content-between">
-                        <p class="fs-4"> Siendo parte de las soluciones que tenemos, la que mejor se acomode a tu ritmo</p>
-                        <p class="fs-4"> Tu armas tu calendario y decides cuando...</p>
-                        <img class="img-fluid flex-grow-1" src="./Imagenes/index/indexInformacion1.png" alt="calendario y lapiz">
-                    </div>
+                        <div class="row justify-content-center">
+                            <div><!--para contenedor horas-->
+                                <div id="hoursContainer" class="mt-4 text-center d-none">
+                                    <h4>Horas disponibles para: <span id="selectedDate"></span></h4>
+                                    <ul id="availableHours" class="list-group mx-auto" style="max-width: 300px;">
+                                      <!-- Las horas disponibles se llenarán aquí -->
+                                    </ul>
+                              
+                                  </div>
     
-    
-                </div>
-                
-                <div class="col-md-6 col-12">
-                    <img class="img-fluid h-100" src="./Imagenes/index/indexInformacion2.png" alt="diagrama">
-                </div>
-            </div>
-        </div>
- 
-
-
-
-    </section>
-
-
-
-
-    <section name="indexInformacion" class="container-fluid m-5">
-        <div class="d-flex flex-column">
-
-            <div class="row h-25">
-                <div class="col-md-4">
-                    <img class="img-fluid" src="./Imagenes/index/indexPreguntas.png" alt="computador y compras">
-                </div>
-                <div class="col-md-8 d-flex flex-column">
-                    <h1> ¿Alguna pregunta?</h1>
-                    <p class="fs-4"> REVISA LA INFORMACION DE AQUI ABAJO PARA TERMINAR DE CONVERCERTE</p>
-                </div>
-            </div>
-
-            <div class="row h-75">
-                <div class="col-md-4 col-12">
-                    <div class="d-flex flex-column">
-                        <div class="d-flex flex-column m-1 p-1 border border-success border-5">
-                            <p class="fs-3"> Pregunta 1</p>
-                            <hr class="border-2 border-success border-5">
-                            <p class="fs-5"> Respuesta 1</p>
-                        </div>
-                        <div class="d-flex flex-column m-1 p-1 border border-success border-5">
-                            <p class="fs-3"> Pregunta 2</p>
-                            <hr class="border-2 border-success border-5">
-                            <p class="fs-5"> Respuesta 2</p>
+                            </div> 
+                        
+                        
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-12">
-                    <div class="d-flex flex-column">
-                        <div class="d-flex flex-column mt-1 mb-1 p-1 border border-success border-5">
-                            <p class="fs-3"> Pregunta 3</p>
-                            <hr class="border-2 border-success border-5">
-                            <p class="fs-5"> Respuesta 3</p>
-                        </div>
-                        <div class="d-flex flex-column mt-1 mb-1 mb-1 p-1 border border-success border-5">
-                            <p class="fs-3"> Pregunta 4</p>
-                            <hr class="border-2 border-success border-5">
-                            <p class="fs-5"> Respuesta 4</p>
-                        </div>
-                    </div>
-                </div> 
-                <div class="col-md-4 col-12">
-                    <div class="d-flex flex-column">
-                        <div class="d-flex flex-column m-1 p-1 border border-success border-5">
-                            <p class="fs-3"> Pregunta 5</p>
-                            <hr class="border-2 border-success border-5">
-                            <p class="fs-5"> Respuesta 5</p>
-                        </div>
-                        <div class="d-flex flex-column m-1 p-1 border border-success border-5">
-                            <p class="fs-3"> Pregunta 6</p>
-                            <hr class="border-2 border-success border-5">
-                            <p class="fs-5"> Respuesta 6</p>
-                        </div>
-                    </div>
+                <div class="col-md-6 justify-content-center">
+                    <div class="input-group" id="datepicker">
+                        <!--aqui estara el calendario-->
+                     </div>
+                  
                 </div>
             </div>
-        </div>
-    </section>
-    
+
+
+
+
     </main>
 
 
-    <footer class="container-fluid m-5">
-        <div class="row">
-            <img class="img-fluida" src="./Imagenes/index/indexPie.png">
-        </div>
 
+    <script>
+        $(document).ready(function () {
+          // Inicializar el datepicker
+          $('#datepicker').datepicker({
+            format: 'yyyy-mm-dd', // Formato de la fecha
+            todayHighlight: true, // Resaltar el día actual
+            autoclose: true, // Cerrar automáticamente después de seleccionar una fecha
+          }).on('changeDate', function (e) {
+            // Obtener la fecha seleccionada
+            const selectedDate = e.format(0, "yyyy-mm-dd");
+            $('#selectedDate').text(selectedDate);
+      
+            // Mostrar horas disponibles
+            const hoursContainer = $('#hoursContainer');
+            const hoursList = $('#availableHours');
+            hoursList.empty(); // Limpiar las horas anteriores
+      
+            // Agregar horas con botones
+            const hours = [
+              '09:00 AM - 10:00 AM',
+              '10:30 AM - 11:30 AM',
+              '01:00 PM - 02:00 PM',
+              '03:00 PM - 04:00 PM',
+            ];
+      
+            hours.forEach(hour => {
+              const listItem = `
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  ${hour}
+                  <button class="btn btn-primary btn-sm select-hour" 
+                          data-date="${selectedDate}" 
+                          data-hour="${hour}">
+                    Seleccionar
+                  </button>
+                </li>`;
+              hoursList.append(listItem);
+            });
+      
+            hoursContainer.removeClass('d-none'); // Mostrar el contenedor de horas
+          });
+      
+          // Capturar clic en el botón de selección de hora
+          $(document).on('click', '.select-hour', function () {
+            const selectedDate = $(this).data('date');
+            const selectedHour = $(this).data('hour');
+      
+            // Aquí puedes enviar los datos a tu backend o procesarlos
+            const requestData = {
+              date: selectedDate,
+              hour: selectedHour,
+            };
+      
+            // Simular envío (reemplaza con tu lógica real)
+            console.log('Datos enviados:', requestData);
+      
+            // Redirigir a otra página después de enviar los datos
+            window.location.href = 'perfil/MiCalendario.html'; // Cambia 'pagina-destino.html' por la URL deseada
+          });
+        });
+      </script>
+      
+    
+   
+
+
+
+
+
+
+
+    <footer class="bg-dark" style="height: 5%;">Footer
     </footer>
 
 
 
 
-
-
-
-
+    
 </body>
 </html>

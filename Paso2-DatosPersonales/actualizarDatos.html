@@ -11,8 +11,8 @@
 </head>
 
 
-<body class="d-flex flex-column min-vh-100">
-    <header class="flex-grow-0 " style="height: 15vh;">
+<body class=" container-fluid flex-column min-vh-100">
+    <header class=" container-fluid flex-grow-0 " style="height: 15vh;">
         <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
             <div class="container-fluid">
 
@@ -54,121 +54,156 @@
           </nav>
 
     </header>
- 
 
-
-    <main class="container-fluid flex-grow-0 bg-white align-items-stretch" style="height: 77vh;" >
-        <h2>Completa tus Datos</h2>
-        <form action="finPaso2.html" > <!--para efectos de probar la direccion de los botones no se considera el envio del formulario temporalmente-->
-            <div class="d-flex mb-3 mt-3">
-                <div class="p-2">
-                    <label for="Telefono">Telefono:</label>
-                </div>
-                <div class="p-2 flex-grow-1">
-                    <input type="text" class="form-control" id="telefono" name="telefono" maxlength="9" pattern="\d{9}" required>         
-                </div>
-            </div>
-
-            <div class="d-flex mb-3 mt-3">
-                <div class="p-2">
-                    <label for="direccion">Direccion:</label>
-                </div>
-                <div class="p-2 flex-grow-1">
-                    <input type="text" class="form-control" id="direccion" name="direccion" maxlength="70" required>
-                </div>
-            </div>
-
-            <div class="d-flex mb-3 mt-3">
-                <div class="p-2">
-                    <label for="codigoPostal">Codigo Postal:</label>
-                </div>
-                <div class="p-2 flex-grow-1">
-                    <input type="text" class="form-control" id="codigoPostal" name="codigoPostal" maxlength="10" required>
-                </div>
-            </div>
-           
-            <div class="d-flex mb-3 mt-3">
-                <div class="p-2">
-                    <label for="banco">Banco:</label>
-                </div>
-                <div class="p-2 flex-grow-1">
-                    <input type="text" class="form-control" id="banco" name="codigoPostal" maxlength="20" required>
-                </div>
-            </div>
-
-            <div class="d-flex mb-3 mt-3">
-                <div class="p-2">
-                    <label for="tipo de cuenta">tipo de cuenta:</label>
-                </div>
-                <div class="p-2 flex-grow-1">
-                    <input type="text" class="form-control" id="tipoDeCuenta" name="tipoDeCuenta" maxlength="20" required>
-                </div>
-            </div>
-
-            <div class="d-flex mb-3 mt-3">
-                <div class="p-2">
-                    <label for="numeroDeCuenta">Numero de Cuenta:</label>
-                </div>
-                <div class="p-2 flex-grow-1">
-                    <input type="text" class="form-control" id="numeroDeCuenta" name="numeroDeCuenta" maxlength="20" required>
-                </div>
-            </div>
-
-
-            <div class="form-check mb-3">
-                <label class="form-check-label">
-                    <p>Mis Intereses:</p>
-                    <input class="form-check-input" type="checkbox" name="Leer"> Leer
-                </label>
-            </div>
+    <main class="container-fluid d-flex flex-column" style="height: 80vh;">
+        <div class="d-flex flex-column h-100">
             
-            <div class="form-check mb-3">
-                <label class="form-check-label">
+            <div class="row align-items-center" style="height: 10vh;">
+                <div class="progress" >
+                    <div class="progress-bar bg-success" style="width:20%">Paso 1</div>
+                    <div class="progress-bar bg-warning" style="width:20%">Paso 2</div>
+                    <!--div class="progress-bar bg-success" style="width:20%"></div>
+                    <div class="progress-bar bg-danger" style="width:20%"></div>
+                    <div class="progress-bar " style="width:20%"> </div>-->
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="d-flex flex-column h-100 justify-content-center">
+                        <div class="row text-center mb-5 align-items-center">
+                            <h1>Completa tus Datos</h1>
+                        </div>
+                        <div class="row justify-content-center " style="height: 15%;">
+                            <img class="img-fluid" src="../Imagenes/inscripcion/inscripcion.png" alt="mujer en el pc">  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 justify-content-center">
                     
-                    <input class="form-check-input" type="checkbox" name="cine"> cine
-                </label>
-            </div>
+                    <form action="finPaso2.html" > <!--para efectos de probar la direccion de los botones no se considera el envio del formulario temporalmente-->
+                    
+                        <div class="d-flex" name="formularioTelefono">
+                            <div class="col-md-2">
+                                <label for="Telefono">Telefono:</label>                            
+                            </div>    
+                            <div class="col-12 col-md-10 flex-grow-1">
+                                <input type="text" class="form-control" id="telefono" name="telefono" maxlength="9" pattern="\d{9}" required>         
+                            </div>    
+                        </div>
 
-            <div class="form-check mb-3">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="Bailar"> Bailar
-                </label>
-            </div>
+                        <div class="row" name="formulariDireccion">
+                            <div class="col-md-2">
+                                <label for="direccion">Direccion:</label>
+                            </div>
+                            <div class="col-md-10 col-12 flex-grow-1">
+                                <input type="text" class="form-control" id="direccion" name="direccion" maxlength="70" required>
+                            </div>
+                        </div>
 
+                        <div class="row" name="formularioCodigo">
+                            <div class="col-md-2">
+                                <label for="codigoPostal">Codigo Postal:</label>
+                            </div>
+                            <div class=" col-md-10 col-12 p-2 flex-grow-1">       
+                                <input type="text" class="form-control" id="codigoPostal" name="codigoPostal" maxlength="10" required>
+                            </div>
+                        </div>
+
+                        <div class="row" name="Formulariobanco">
+                            <div class="col-md-2">
+                                <label for="banco">Banco:</label>
+                            </div>
+                            <div class=" col-md-10 col-12 p-2 flex-grow-1">
+                                <input type="text" class="form-control" id="banco" name="Banco" maxlength="20" required>
+                            </div>
+                        </div>
+
+                        <div class="row" name="formularioCuenta">
+                            <div class="col-md-2">
+                                <label for="Telefono">N° Cuenta:</label>
+                            </div>                            
+                            <div class="col-12 col-md-10 flex-grow-1">
+                                <input type="text" class="form-control" id="cuenta" name="cuenta" maxlength="16" pattern="\d{6-16}" required>         
+                            </div>    
+                        </div>
+
+                        <div class="row" name="formulariTipoCuenta">
+                            <div class="col-md-2">
+                                <label for="tipoCuenta">Tipo de cuenta:</label>
+                            </div>
+                            <div class="col-md-10 col-12 flex-grow-1">
+                                <input type="text" class="form-control" id="tipoCuenta" name="tipoCuenta" maxlength="70" required>
+                            </div>
+                        </div>
+                        <p>Mis Intereses:</p>
+                        
+                        <div class="row ">
+                            <div class="col-md-6 form-check mb-3">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="Leer"> Leer
+                                </label>
+                            </div>
+                            <div class="col-md-6 form-check mb-3">
+                                <label class="form-check-label">
+                                    
+                                    <input class="form-check-input" type="checkbox" name="cine"> cine
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-6 form-check mb-3">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="Leer"> Bailar
+                                </label>
+                            </div>
+                            <div class="col-md-6 form-check mb-3">
+                                <label class="form-check-label">
+                                    
+                                    <input class="form-check-input" type="checkbox" name="cine"> Dormir
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-6 form-check mb-3">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="Leer"> otro
+                                </label>
+                            </div>
+                            <div class="col-md-6 form-check mb-3">
+                                
+
+
+                            </div>
+                        </div>
+
+                        
+                        
             
-            <div class="form-check mb-3">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="dormir"> Dormir
-                </label>
-            </div>
+                        <div class="row mb-3">
+                            <div class="col-3" style="text-align: right;">
+                                <label for="pwd">Contraseña:</label>
+                            </div>
 
-            
-            <div class="form-check mb-3">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="otro"> otro
-                </label>
-            </div>
+                            
 
-            <div class="row mb-3">
-                <div class="col-3" style="text-align: right;">
-                    <label for="pwd">Contraseña:</label>
-                </div>
-                <div class="col-6" >
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+
+                        <button name="btnInscripcionFormulario" type="submit" class=" row btn btn-primary" id="btnIncripcion">Inscribirme</button>
+                    </form>
+                    
+
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary"></button>
-        </form>
+
+
 
     </main>
 
-    <footer class="bg-danger" style="height: 5vh;">
+    <footer class="bg-dark" style="height: 5%;">Footer
     </footer>
-        
-    
-    
-    
+
     
     
 </body>
