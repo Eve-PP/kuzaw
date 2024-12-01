@@ -1,226 +1,190 @@
 <!DOCTYPE html>
 <html lang="es-mx">
-
 <head>
-    <title>Paso 1: Agendar entrevista</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
-    <!-- Bootstrap CSS 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- Bootstrap Datepicker CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
-       <!-- Bootstrap JS
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
-    <!-- jQuery (requerido para datepicker) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
-    <!-- Bootstrap Datepicker JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-    
-    
-    <style>
-      /* Estilo personalizado para el datepicker */
-      #datepicker {
-        font-size: 3rem; /* Ajusta el tamaño del texto */
-        
-      }
-  
-      .table-condensed {
-        background-color: bisque;
-        font-size: 1rem; /* Ajusta el tamaño de fuente */
-        border-radius: 10%; /* Bordes redondeados */
-        border: 0.5rem solid red; /* Borde rojo */
-      
-  
-      /* Asegura espacio entre el contenido y el borde
-      .table-condensed td, */
-      .table-condensed th {
-        padding: 0rem 1rem 0rem 1rem; /* Ajusta el espacio dentro de las celdas */
-        text-align: center; /* Alineación centrada del contenido */
-       
-      }
-    </style>
-  
-  
-  </head>
-  
+  <title>Paso 1 Ir a entrevista</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-<body class=" container-fluid flex-column">
-    <header class=" container-fluid flex-grow-0 " style="height: 15vh;">
-        <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
-            <div class="container-fluid">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
 
 
-              <a class="navbar-brand" href="../index.html">
-                    <img src="../Imagenes/index/logo.png" alt="Avatar Logo" class="img-fluid"> 
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav ms-auto align-items-center fs-1">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">INICIO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../quienesSomos.html">QUIENES SOMOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link bi bi-whatsapp b fs-1" href="https://web.whatsapp.com/"></a>
-                    </li>
 
-                    <li class="dropdown me-5 pe-5">
-                        <button class="nav-link bi bi-person-circle fs-1" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                            <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="../login.html">Iniciar Sesión</a></li>
-                                <li><a class="dropdown-item" href="../index.html">Inscribirme</a></li>
-                            
-                            </ul>
-                    </li>
-
-                      
-                </ul>
-                              
-                
-                </form>
-              </div>
-            </div>
-          </nav>
-
-    </header>
-
-    <main class="container-fluid d-flex flex-column">
-        <div class="d-flex flex-column h-100">
-            
-            <div class="row align-items-center" style="height: 10vh;">
-                <div class="progress" >
-                    <div class="progress-bar bg-warning" style="width:20%">Paso 1</div>
-                    <!--<div class="progress-bar bg-warning" style="width:20%"></div>
-                    <div class="progress-bar bg-success" style="width:20%"></div>
-                    <div class="progress-bar bg-danger" style="width:20%"></div>
-                    <div class="progress-bar " style="width:20%"> </div>-->
-                </div>
-            </div>
+<body class="d-flex flex-column min-vh-100">
+  <header class="flex-grow-0 " style="height: 15vh;">
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+        <div class="container-fluid">
 
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="d-flex flex-column h-100 justify-content-center">
-                        <div class="row text-center mb-5">
-                            <h2> Lo primero es lo primero,</h2>
-                            <h1> conozcamonos</h1>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div><!--para contenedor horas-->
-                                <div id="hoursContainer" class="mt-4 text-center d-none">
-                                    <h4>Horas disponibles para: <span id="selectedDate"></span></h4>
-                                    <ul id="availableHours" class="list-group mx-auto" style="max-width: 300px;">
-                                      <!-- Las horas disponibles se llenarán aquí -->
-                                    </ul>
-                              
-                                  </div>
-    
-                            </div> 
+          <a class="navbar-brand" href="../index.html">
+                <img src="../Imagenes/index/logo.png" alt="Avatar Logo" class="img-fluid"> 
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav ms-auto align-items-center fs-1">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../quienesSomos.html">QUIENES SOMOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bi bi-whatsapp b fs-1" href="https://web.whatsapp.com/"></a>
+                </li>
+
+                <li class="dropdown me-5 pe-5">
+                    <button class="nav-link bi bi-person-circle fs-1" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="../login.html">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="../index.html">Inscribirme</a></li>
                         
-                        
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 justify-content-center">
-                    <div class="input-group" id="datepicker">
-                        <!--aqui estara el calendario-->
-                     </div>
+                        </ul>
+                </li>
+
                   
-                </div>
+            </ul>
+                          
+            
+            </form>
+          </div>
+        </div>
+      </nav>
+
+  </header>
+
+  <main class="container-fluid d-flex flex-grow-1" style="height: 80vh;">
+        
+    <div class="d-flex flex-column justify-content-around flex-grow-1">
+        
+        <div class="row align-items-center p-3 m-3" style="height: 10vh;">
+            <div class="progress" >
+                <div class="progress-bar bg-success" style="width:20%">Paso 1</div>
+                <div class="progress-bar bg-success" style="width:20%">Paso 2</div>
+                <div class="progress-bar bg-warning" style="width:20%">Paso 3</div>
+                <!--div class="progress-bar bg-danger" style="width:20%"></div>
+                <div class="progress-bar " style="width:20%"> </div>-->
             </div>
+        </div>
+        
+        <div class="row text-center" name = "titulo" >
+          <h3> PRECISANDO CONOCIMIENTO</h3>
+        </div>
+      
+        <div class="row justify-content-start" name="seleccionar_categoria">
+          <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle w-25 m-2" data-bs-toggle="dropdown">
+              Categorías
+            </button>
+            <ul class="dropdown-menu" id="categoryDropdown">
+              <li><a class="dropdown-item" data-category="categoria1">Trabajo</a></li>
+              <li><a class="dropdown-item" data-category="categoria2">Gatos</a></li>
+              <li><a class="dropdown-item" data-category="categoria3">Alimentos</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Carousel -->
+        <div name="carrusel" id="demo" class="row carousel slide" data-bs-ride="carousel">
+          <div class="col-md-2">
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-success"></span>
+            </button>
+          </div>
+        
+          <div class="col-md-8 h-100">
+            <div class="carousel-inner" id="carouselContent">
+              <!-- El contenido dinámico se generará aquí -->
+              <div class="carousel-item active">
+                <img src="../Imagenes/index/indexlibertad.png" alt="c1" class="d-block w-100" style="height: 40vh;" >
+                <div class="carousel-caption">
+                  <h3>Selecciona una categoria para empezar</h3>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        
+          <div class="col-md-2">
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-success"></span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="row justify-content-end">
+          <a type="button" class="btn btn-secondary w-25 m-2" href="CapacitacionFichas.html">Siguiente</a>
+        </div>
+        
 
 
 
 
-    </main>
 
 
+    </div>
+            
+  </main>
 
-    <script>
-        $(document).ready(function () {
-          // Inicializar el datepicker
-          $('#datepicker').datepicker({
-            format: 'yyyy-mm-dd', // Formato de la fecha
-            todayHighlight: true, // Resaltar el día actual
-            autoclose: true, // Cerrar automáticamente después de seleccionar una fecha
-          }).on('changeDate', function (e) {
-            // Obtener la fecha seleccionada
-            const selectedDate = e.format(0, "yyyy-mm-dd");
-            $('#selectedDate').text(selectedDate);
+
+  <footer class="bg-dark" style="height: 5vh;">Footer
+  </footer>
       
-            // Mostrar horas disponibles
-            const hoursContainer = $('#hoursContainer');
-            const hoursList = $('#availableHours');
-            hoursList.empty(); // Limpiar las horas anteriores
-      
-            // Agregar horas con botones
-            const hours = [
-              '09:00 AM - 10:00 AM',
-              '10:30 AM - 11:30 AM',
-              '01:00 PM - 02:00 PM',
-              '03:00 PM - 04:00 PM',
-            ];
-      
-            hours.forEach(hour => {
-              const listItem = `
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  ${hour}
-                  <button class="btn btn-primary btn-sm select-hour" 
-                          data-date="${selectedDate}" 
-                          data-hour="${hour}">
-                    Seleccionar
-                  </button>
-                </li>`;
-              hoursList.append(listItem);
-            });
-      
-            hoursContainer.removeClass('d-none'); // Mostrar el contenedor de horas
-          });
-      
-          // Capturar clic en el botón de selección de hora
-          $(document).on('click', '.select-hour', function () {
-            const selectedDate = $(this).data('date');
-            const selectedHour = $(this).data('hour');
-      
-            // Aquí puedes enviar los datos a tu backend o procesarlos
-            const requestData = {
-              date: selectedDate,
-              hour: selectedHour,
-            };
-      
-            // Simular envío (reemplaza con tu lógica real)
-            console.log('Datos enviados:', requestData);
-      
-            // Redirigir a otra página después de enviar los datos
-            window.location.href = 'perfil/MiCalendario.html'; // Cambia 'pagina-destino.html' por la URL deseada
-          });
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const dropdownItems = document.querySelectorAll("#categoryDropdown .dropdown-item");
+    const carouselContent = document.getElementById("carouselContent");
+  
+    // Imágenes por categoría
+    const imagesByCategory = {
+      categoria1: [
+        "../Imagenes/capacitacion/categoria1/c1.png",
+        "../Imagenes/capacitacion/categoria1/c2.png",
+        "../Imagenes/capacitacion/Categoria1/c3.png"
+      ],
+      categoria2: [
+        "../Imagenes/capacitacion/categoria2/c2_1.png",
+        "../Imagenes/capacitacion/categoria2/c2_2.png",
+        "../Imagenes/capacitacion/categoria2/c2_3.png"
+      ],
+      categoria3: [
+        "../Imagenes/capacitacion/categoria3/c3_1.png",
+        "../Imagenes/capacitacion/categoria3/c3_2.png",
+        "../Imagenes/capacitacion/categoria3/c3_3.png"
+      ]
+    };
+  
+    // Evento de clic en el dropdown
+    dropdownItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const category = item.getAttribute("data-category");
+        const images = imagesByCategory[category] || [];
+  
+        // Limpiar contenido actual del carrusel
+        carouselContent.innerHTML = "";
+  
+        // Agregar nuevas imágenes al carrusel
+        images.forEach((imgSrc, index) => {
+          const isActive = index === 0 ? "active" : "";
+          const carouselItem = `
+            <div class="carousel-item ${isActive}">
+              <img src="${imgSrc}" alt="${category}" class="d-block w-100" style="height: 40vh;">
+            </div>
+          `;
+          carouselContent.innerHTML += carouselItem;
         });
-      </script>
-      
+      });
+    });
+  });
+  
+  </script>
     
-   
-
-
-
-
-
-
-
-    <footer class="bg-dark" style="height: 5%;">Footer
-    </footer>
-
-
-
-
     
 </body>
 </html>
+    

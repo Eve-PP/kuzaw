@@ -8,8 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 
 
 <body class="d-flex flex-column min-vh-100">
@@ -54,79 +54,135 @@
         </div>
       </nav>
 
-</header>
+  </header>
 
-    
-
-
-    <main class="container-fluid flex-grow-0 bg-white align-items-stretch" style="height: 87vh;" >
+  <main class="container-fluid d-flex flex-grow-1" style="height: 80vh;">
         
-        <div class="d-flex flex-column justify-content-around h-100">
-            
-            <div class="row align-items-center" style="height: 10vh;">
-                <div class="progress" >
-                    <div class="progress-bar bg-success" style="width:20%">Paso 1</div>
-                    <div class="progress-bar bg-success" style="width:20%">Paso 2</div>
-                    <div class="progress-bar bg-warning" style="width:20%">Paso 3</div>
-                    <!--div class="progress-bar bg-danger" style="width:20%"></div>
-                    <div class="progress-bar " style="width:20%"> </div>-->
-                </div>
+    <div class="d-flex flex-column justify-content-around flex-grow-1">
+        
+        <div class="row align-items-center p-3 m-3" style="height: 10vh;">
+            <div class="progress" >
+                <div class="progress-bar bg-success" style="width:20%">Paso 1</div>
+                <div class="progress-bar bg-success" style="width:20%">Paso 2</div>
+                <div class="progress-bar bg-warning" style="width:20%">Paso 3</div>
+                <!--div class="progress-bar bg-danger" style="width:20%"></div>
+                <div class="progress-bar " style="width:20%"> </div>-->
             </div>
-
-            <div class="row align-items-center justify-content-center flex-grow-1">
-                
-              <!-- Carousel -->
-              <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-                <!-- Indicators/dots -->
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                  <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        
+        <div class="row text-center" name = "titulo" >
+          <h3> PRECISANDO CONOCIMIENTO</h3>
+        </div>
+      
+        <div class="row justify-content-start" name="seleccionar_categoria">
+          <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle w-25 m-2" data-bs-toggle="dropdown">
+              Categorías
+            </button>
+            <ul class="dropdown-menu" id="categoryDropdown">
+              <li><a class="dropdown-item" data-category="categoria1">Trabajo</a></li>
+              <li><a class="dropdown-item" data-category="categoria2">Gatos</a></li>
+              <li><a class="dropdown-item" data-category="categoria3">Alimentos</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Carousel -->
+        <div name="carrusel" id="demo" class="row carousel slide" data-bs-ride="carousel">
+          <div class="col-md-2">
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-success"></span>
+            </button>
+          </div>
+        
+          <div class="col-md-8 h-100">
+            <div class="carousel-inner" id="carouselContent">
+              <!-- El contenido dinámico se generará aquí -->
+              <div class="carousel-item active">
+                <img src="../Imagenes/index/indexlibertad.png" alt="c1" class="d-block w-100" style="height: 40vh;" >
+                <div class="carousel-caption">
+                  <h3>Selecciona una categoria para empezar</h3>
                 </div>
-                
-                <!-- The slideshow/carousel -->
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="../Imagenes/capacitacion/c1.png" alt="c1" class="d-block" style="width:25%">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../Imagenes/capacitacion/c2.png" alt="c2" class="d-block" style="width:25%">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../Imagenes/capacitacion/c3.png" alt="c3" class="d-block" style="width:25%">
-                  </div>
-                </div>
-                
-                <!-- Left and right controls/icons -->
-                <button class="carousel-control-prev bg-danger" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next bg-danger" type="button" data-bs-target="#demo" data-bs-slide="next">
-                  <span class="carousel-control-next-icon"></span>
-                </button>
               </div>
 
 
             </div>
-            
-            
-  
-  
-                
-
-                
+          </div>
         
-            
+          <div class="col-md-2">
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-success"></span>
+            </button>
+          </div>
         </div>
-    </main>
 
-    <footer>
-    </footer>
+
+        <div class="row justify-content-end">
+          <a type="button" class="btn btn-secondary w-25 m-2" href="CapacitacionFichas.html">responder cuestionario</a>
+        </div>
         
-    
-    
-    
+
+
+
+
+
+
+    </div>
+            
+  </main>
+
+
+  <footer class="bg-dark" style="height: 5vh;">Footer
+  </footer>
+      
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const dropdownItems = document.querySelectorAll("#categoryDropdown .dropdown-item");
+    const carouselContent = document.getElementById("carouselContent");
+  
+    // Imágenes por categoría
+    const imagesByCategory = {
+      categoria1: [
+        "../Imagenes/capacitacion/categoria1/c1.png",
+        "../Imagenes/capacitacion/categoria1/c2.png",
+        "../Imagenes/capacitacion/Categoria1/c3.png"
+      ],
+      categoria2: [
+        "../Imagenes/capacitacion/categoria2/c2_1.png",
+        "../Imagenes/capacitacion/categoria2/c2_2.png",
+        "../Imagenes/capacitacion/categoria2/c2_3.png"
+      ],
+      categoria3: [
+        "../Imagenes/capacitacion/categoria3/c3_1.png",
+        "../Imagenes/capacitacion/categoria3/c3_2.png",
+        "../Imagenes/capacitacion/categoria3/c3_3.png"
+      ]
+    };
+  
+    // Evento de clic en el dropdown
+    dropdownItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const category = item.getAttribute("data-category");
+        const images = imagesByCategory[category] || [];
+  
+        // Limpiar contenido actual del carrusel
+        carouselContent.innerHTML = "";
+  
+        // Agregar nuevas imágenes al carrusel
+        images.forEach((imgSrc, index) => {
+          const isActive = index === 0 ? "active" : "";
+          const carouselItem = `
+            <div class="carousel-item ${isActive}">
+              <img src="${imgSrc}" alt="${category}" class="d-block w-100" style="height: 40vh;">
+            </div>
+          `;
+          carouselContent.innerHTML += carouselItem;
+        });
+      });
+    });
+  });
+  
+  </script>
     
     
 </body>
