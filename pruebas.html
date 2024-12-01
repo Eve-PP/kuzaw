@@ -57,132 +57,121 @@
   </header>
 
   <main class="container-fluid d-flex flex-grow-1" style="height: 80vh;">
-        
-    <div class="d-flex flex-column justify-content-around flex-grow-1">
-        
-        <div class="row align-items-center p-3 m-3" style="height: 10vh;">
-            <div class="progress" >
-                <div class="progress-bar bg-success" style="width:20%">Paso 1</div>
-                <div class="progress-bar bg-success" style="width:20%">Paso 2</div>
-                <div class="progress-bar bg-warning" style="width:20%">Paso 3</div>
-                <!--div class="progress-bar bg-danger" style="width:20%"></div>
-                <div class="progress-bar " style="width:20%"> </div>-->
-            </div>
+    <div class="container mt-5">
+      <form id="quizForm">
+        <h4>¿Cuál es la capital de Francia?</h4>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="quizOption" id="option1" value="Madrid">
+          <label class="form-check-label" for="option1">
+            Madrid
+          </label>
         </div>
-        
-        <div class="row text-center" name = "titulo" >
-          <h3> PRECISANDO CONOCIMIENTO</h3>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="quizOption" id="option2" value="París">
+          <label class="form-check-label" for="option2">
+            París
+          </label>
         </div>
-      
-        <div class="row justify-content-start" name="seleccionar_categoria">
-          <div class="dropdown">
-            <button type="button" class="btn btn-secondary dropdown-toggle w-25 m-2" data-bs-toggle="dropdown">
-              Categorías
-            </button>
-            <ul class="dropdown-menu" id="categoryDropdown">
-              <li><a class="dropdown-item" data-category="categoria1">Trabajo</a></li>
-              <li><a class="dropdown-item" data-category="categoria2">Gatos</a></li>
-              <li><a class="dropdown-item" data-category="categoria3">Alimentos</a></li>
-            </ul>
-          </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="quizOption" id="option3" value="Londres">
+          <label class="form-check-label" for="option3">
+            Londres
+          </label>
         </div>
-        
-        <!-- Carousel -->
-        <div name="carrusel" id="demo" class="row carousel slide" data-bs-ride="carousel">
-          <div class="col-md-2">
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon bg-success"></span>
-            </button>
-          </div>
-        
-          <div class="col-md-8 h-100">
-            <div class="carousel-inner" id="carouselContent">
-              <!-- El contenido dinámico se generará aquí -->
-              <div class="carousel-item active">
-                <img src="../Imagenes/index/indexlibertad.png" alt="c1" class="d-block w-100" style="height: 40vh;" >
-                <div class="carousel-caption">
-                  <h3>Selecciona una categoria para empezar</h3>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        
-          <div class="col-md-2">
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-              <span class="carousel-control-next-icon bg-success"></span>
-            </button>
-          </div>
-        </div>
-
-
-        <div class="row justify-content-end">
-          <a type="button" class="btn btn-secondary w-25 m-2" href="CapacitacionFichas.html">Siguiente</a>
-        </div>
-        
-
-
-
-
-
-
+        <button type="button" class="btn btn-primary mt-3" id="submitAnswer" data-bs-toggle="modal" data-bs-target="#resultModal">
+          Enviar Respuesta
+        </button>
+      </form>
     </div>
+
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultModalLabel">Resultado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body" id="resultMessage">
+        <!-- Aquí se actualizará el mensaje -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          
+
             
   </main>
 
 
   <footer class="bg-dark" style="height: 5vh;">Footer
   </footer>
-      
+  
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-    const dropdownItems = document.querySelectorAll("#categoryDropdown .dropdown-item");
-    const carouselContent = document.getElementById("carouselContent");
+    document.getElementById("submitAnswer").addEventListener("click", function () {
+      // Obtener la respuesta seleccionada
+      const selectedOption = document.querySelector('input[name="quizOption"]:checked');
   
-    // Imágenes por categoría
-    const imagesByCategory = {
-      categoria1: [
-        "../Imagenes/capacitacion/categoria1/c1.png",
-        "../Imagenes/capacitacion/categoria1/c2.png",
-        "../Imagenes/capacitacion/Categoria1/c3.png"
-      ],
-      categoria2: [
-        "../Imagenes/capacitacion/categoria2/c2_1.png",
-        "../Imagenes/capacitacion/categoria2/c2_2.png",
-        "../Imagenes/capacitacion/categoria2/c2_3.png"
-      ],
-      categoria3: [
-        "../Imagenes/capacitacion/categoria3/c3_1.png",
-        "../Imagenes/capacitacion/categoria3/c3_2.png",
-        "../Imagenes/capacitacion/categoria3/c3_3.png"
-      ]
-    };
+      // Mensaje del modal
+      const resultMessage = document.getElementById("resultMessage");
   
-    // Evento de clic en el dropdown
-    dropdownItems.forEach(item => {
-      item.addEventListener("click", () => {
-        const category = item.getAttribute("data-category");
-        const images = imagesByCategory[category] || [];
+      if (!selectedOption) {
+        // Si no se seleccionó ninguna opción
+        resultMessage.textContent = "Por favor, selecciona una respuesta.";
+        return;
+      }
   
-        // Limpiar contenido actual del carrusel
-        carouselContent.innerHTML = "";
-  
-        // Agregar nuevas imágenes al carrusel
-        images.forEach((imgSrc, index) => {
-          const isActive = index === 0 ? "active" : "";
-          const carouselItem = `
-            <div class="carousel-item ${isActive}">
-              <img src="${imgSrc}" alt="${category}" class="d-block w-100" style="height: 40vh;">
-            </div>
-          `;
-          carouselContent.innerHTML += carouselItem;
-        });
-      });
+      // Validar la respuesta correcta
+      const correctAnswer = "París"; // Respuesta correcta
+      if (selectedOption.value === correctAnswer) {
+        resultMessage.textContent = "¡Correcto! La capital de Francia es París.";
+      } else {
+        resultMessage.textContent = `Incorrecto. La respuesta correcta es París, no ${selectedOption.value}.`;
+      }
     });
-  });
-  
   </script>
+
+  <!-- Botón para abrir el modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">
+  Abrir Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Título del Modal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        Este es el contenido del modal.
+      </div>
+      <div class="modal-footer">
+        <!-- Botón para cerrar el modal y redirigir -->
+        <button type="button" class="btn btn-primary" id="aPregunta2" data-bs-dismiss="modal">
+          Ir a otra página
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Solo cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Escuchar el evento click del botón con id="redirectButton"
+  document.getElementById("redirectButton").addEventListener("click", function () {
+    // Redirigir a la página deseada
+    window.location.href = "https://www.ejemplo.com"; // Cambia esta URL por la deseada
+  });
+</script>
+
+  
     
     
 </body>

@@ -41,34 +41,34 @@
 
     <main class="container-fluid" style="height: 80vh;">
         <div class="row">
-            <h1>Pregunta 2</h1>
+            <h1>Pregunta 2!!!!!!!</h1>
         </div>
         <div class="row">
             <div class="col-md-7">
-                <form action="pregunta2.html" class="h-100 d-flex flex-column justify-content-between">
+                <form class="h-100 d-flex flex-column justify-content-between">
                     <div>
-                        <p class="fs-3"> Cual de las siguientes opciones es falsa:</p>
+                        <p class="fs-3"> Cual de las siguientes opciones es verdadera:</p>
                     </div>
                     <div class=" d-flex flex-column ms-5 ps-5 h-50 fs-3">
                         <div class="form-check">
-                        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>
+                        <input type="radio" class="form-check-input" id="radio1" name="opciones2" value="option1">
                         <label class="form-check-label" for="radio1">Option 1</label>
                         </div>
                         <div class="form-check">
-                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+                        <input type="radio" class="form-check-input" id="radio2" name="opciones2" value="option2">
                         <label class="form-check-label" for="radio2">Option 2</label>
                         </div>
                         <div class="form-check">
-                        <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">
+                        <input type="radio" class="form-check-input" id="radio3" name="opciones2" value="option3">
                         <label class="form-check-label" for="radio3">Option 3 aklsjdlasdñas</label>
                         </div>
                         <div class="form-check">
-                            <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">
+                            <input type="radio" class="form-check-input" id="radio4" name="opciones2" value="option4">
                             <label class="form-check-label" for="radio4">Option 4</label>
                         </div>
                     </div>
                     <div class="d-flex ms-5 p-5">
-                        <button type="submit" class="btn btn-secondary w-50">Siguiente</button>
+                        <button type="button" class="btn btn-secondary w-50" id="respuesta2" data-bs-toggle="modal" data-bs-target="#check2">Siguiente</button> 
                     </div>                    
                   </form>
             </div>
@@ -77,11 +77,29 @@
                 <img class="img-fluid" src="../Imagenes/evaluacion/estudio.png" style="height: 60vh;">
             </div>
         </div>
-        <div class="row">
-            <!--a type="button" class="btn btn-secondary w-25 m-2" href="CapacitacionFichas.html">Siguiente</a>           
-        </div-->
+
+        <div class="modal fade" id="check2" tabindex="-1" aria-labelledby="tituloCheck2" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="tituloCheck2">Resultado</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="estadoRespuesta2">
+                  <!-- Aquí se actualizará el mensaje -->
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="finalizar">finalizar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        
 
     </main>
+
+    <script src="test.js"></script>
 
     <footer class="bg-dark" style="height: 5vh;">Footer
     </footer>
