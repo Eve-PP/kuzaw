@@ -13,8 +13,8 @@
 
 
 <body class="container-fluid d-flex flex-column min-vh-100">
-    <header class="flex-grow-0 " style="height: 15vh;">
-        <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+    <header class="container-fluid flex-grow-0 p-0" >
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html">
                     <img src="../Imagenes/evaluacion/logo2.png" alt="Avatar Logo" class="img-fluid"> 
@@ -39,11 +39,11 @@
         </nav>
     </header>
 
-    <main class="container-fluid" style="height: 80vh;">
-        <div class="row">
+    <main class="container-fluid flex-grow-1" >
+        <div class="row flex-grow-1">
             <h1>Pregunta 1</h1>
         </div>
-        <div class="row">
+        <div class="row flex-grow-1">
             <div class="col-md-7">
                 <form class="h-100 d-flex flex-column justify-content-between">
                     <div>
@@ -75,17 +75,17 @@
                   </form>
             </div>
             
-            <div class="col-md-5">
+            <div class="col-md-5 d-flex">
                 <img class="img-fluid" src="../Imagenes/evaluacion/estudio.png" style="height: 60vh;">
             </div>
         </div>
 
         <div class="modal fade" id="check1" tabindex="-1" aria-labelledby="tituloCheck1" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="tituloCheck1">Resultado</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  <!--button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button-->
                 </div>
                 <div class="modal-body" id="estadoRespuesta">
                   <!-- Aquí se actualizará el mensaje -->
@@ -103,8 +103,6 @@
 
     <script type="module" src="test.js">    </script>
 
-    <footer class="bg-dark" style="height: 5vh;">Footer
-    </footer>
 
 
 
