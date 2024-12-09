@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-mx">
 <head>
-  <title>Perfil</title>
+  <title>Fin inscripción</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -9,58 +9,102 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body class="d-flex flex-column min-vh-100 ">
-  <header class="container-fluid flex-grow-0" style="height: 6rem;">
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-        <div class="container-fluid">
-            
-            <a class="navbar-brand" href="../index.html">
-                <img src="../Imagenes/index/logo.png" alt="Avatar Logo" class="img-fluid"> 
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
 
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ms-auto align-items-center fs-4">
+<body class="container-fluid d-flex flex-column min-vh-100 p-0">
+    <header class="container-fluid flex-grow-0 p-0" style="height: 6rem;" >
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="container-fluid">
                 
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">INICIO</a>
-                </li>
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../Imagenes/index/logo.png" alt="Avatar Logo" class="img-fluid"> 
+                </a>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../quienesSomos.html">QUIENES SOMOS</a>
-                </li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <li class="nav-item">
-                    <a class="nav-link bi bi-whatsapp b fs-1" href="https://web.whatsapp.com/"></a>
-                </li>
 
-                <li class="nav-item dropdown me-5 pe-5">
-                    <button class="nav-link bi bi-person-circle fs-1" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                        <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="../login.html">Iniciar Sesión</a></li>
-                            <li><a class="dropdown-item" href="../index.html">Inscribirme</a></li>
-                        
-                        </ul>
-                </li>
-                
-            </ul>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ms-auto align-items-center fs-4">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">INICIO</a>
+                    </li>
 
-          </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../quienesSomos.html">QUIENES SOMOS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link bi bi-whatsapp b fs-1" href="https://web.whatsapp.com/"></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <button class="nav-link bi bi-person-circle fs-1" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                            <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="../login.html">Iniciar Sesión</a></li>
+                                <li><a class="dropdown-item" href="../index.html">Inscribirme</a></li>
+                            
+                            </ul>
+                    </li>
+                    
+                </ul>
+
+              </div>
+            </div>
+          </nav>
+      
+    </header>
+
+    <main class="container-fluid d-flex flex-column flex-grow-1 justify-content-around">
+      <div class="row">
+        <h1 class="display-1 fw-bold" style="color: blue;">Perfil</h1>
+      </div>
+      <div class="row">
+        <p class="fs-1" style="color: blue;">Pasos completados: </p>
+      </div>
+        <div class="row " style="height: 30vh;" >
+            <div class="container-fluid position-relative w-75">
+                <div class="progress" style="height: 5vh;" >
+                    <div class="progress-bar bg-success" style="width:20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Paso 1</div>
+                    <div class="progress-bar bg-success" style="width:20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Paso 2</div>
+                    <div class="progress-bar bg-warning" style="width:20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" >Paso 3</div>
+                    <!--div class="progress-bar bg-success" style="width:20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Paso 4</div>
+                    <div class="progress-bar bg-success" style="width:20%"role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Paso 5</div-->
+                </div>
+                <div class="position-absolute top-0" style="left: 60%; transform: translate(-50%, -100%);">
+                    <h1 class="bi bi-person-walking text-dark display-1"></h1>
+                </div>
+                <div class="row text-center">
+                  <div class="col-3">Inscripcion</div>
+                  <div class="col-2">Entrevista</div>
+                  <div class="col-2">Completar Perfil</div>
+                  <div class="col-2">Capacitación</div>
+                  <div class="col-3">Evaluación</div>
+                  
+              </div>
+            </div>
         </div>
-      </nav>
-</header>
 
 
-<main class="bg-light flex-grow-0" style="height: 80vh;">
- 
+        <div class="row" style="height: 10vh;">
+          <div class="col-md-8">
+            <p class="fs-1 fw-bold" style="color: orange;">Actualiza tus datos personales para continuar</p>
+          </div>
+          <div class="col-md-4">
+            <a type="button" class="btn btn-success btn-lg w-75 h-75" href="../Paso2-DatosPersonales/actualizarDatos.html">Actualizar Datos</a>
+          </div>
+           
+        </div>
+
+
+
+
 </main>
 
-<footer class="bg-info flex-grow-0" style="height: 5vh;">
-
+<footer class="bg-dark" style="height: 5%;">Footer
 </footer>
+    
 </body>
 </html>
