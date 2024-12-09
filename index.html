@@ -15,9 +15,9 @@
 
 
 
-<body class=" container-fluid d-flex flex-column">
-    <header class="container-fluid flex-grow-0">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<body class=" container-fluid d-flex flex-column p-0">
+    <header class="container-fluid flex-grow-0 p-0" style="height: 6rem;">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
             <div class="container-fluid">
                 
                 <a class="navbar-brand" href="../index.html">
@@ -65,42 +65,42 @@
 
         <section name="indexInscripcion" class="container-fluid mb-2 mt-2">
 
-            <div class=" row justify-content-center " >
-                <div class="col-md-5">
+            <div class="row " >
+                <div class="col-md-5 d-flex flex-column justify-content-around">
                     <div class="row flex-column text-center ">
                         <h1 class="display-1 fw-bold text-info">TE ESTABAMOS ESPERANDO</h1>
                         <p class="text-success fw-bold display-5" >INSCRÍBETE Y EMPIEZA A GANAR DESDE YA </p>
                     </div>
                         
 
-                    <div class="row bg-white h-75">
-                        <form  class=" h-100 w-100 fs-2 " action="paso1-Entrevista/irAEntrevista.html" name="inicioFormularioInscripcion"> <!--para efectos de probar la direccion de los botones no se considera el envio del formulario temporalmente-->
+                    <div class="row bg-white" style="height: 55%;">
+                        <form  class="d-flex flex-column justify-content-around" action="paso1-Entrevista/irAEntrevista.html" name="inicioFormularioInscripcion"> <!--para efectos de probar la direccion de los botones no se considera el envio del formulario temporalmente-->
                                     
                             <div class="row" name="formularioNombre">
-                                <label class="col-md-3" for="nombre">Nombre:</label>                            
-                                <div class="col-md-9 flex-grow-1">
+                                <label class="col-md-3 fs-3" for="nombre">Nombre:</label>                            
+                                <div class="col-md-9 fs-3 flex-grow-1">
                                     <input type="text" class="form-control bg-light" id="nombre" name="nombre" maxlength="70" required>
                                 </div>    
                             </div>
 
                             <div class="row" name="formularioRut">
-                                <label class="col-md-3" for="rut">RUT:</label>
-                                <div class="col-md-9 flex-grow-1">
+                                <label class="col-md-3 fs-3" for="rut">RUT:</label>
+                                <div class="col-md-9 fs-3 flex-grow-1">
                                     <input type="text" class="form-control bg-light" id="rut" placeholder="12345678-0" name="rut" minlength="9" maxlength="10" 
                                     pattern="\d{7,8}-[\dkK]" required>
                                 </div>
                             </div>
 
                             <div class="row" name="formularioEmail">
-                                <label class="col-md-3" for="email">Email:</label>
-                                <div class=" col-md-9 flex-grow-1">
+                                <label class="col-md-3 fs-3" for="email">Email:</label>
+                                <div class=" col-md-9 fs-3 flex-grow-1">
                                     <input type="email" class="form-control bg-light" id="email"  name="email" required>
                                 </div>
                             </div>
 
                             <div class="row" name="contraseña">
-                                <label class="col-md-3" for="pwd">Contraseña:</label>
-                                <div class=" col-md-9 flex-grow-1">
+                                <label class="col-md-3 fs-3" for="pwd">Contraseña:</label>
+                                <div class=" col-md-9 fs-3 flex-grow-1">
                                     <input type="password" class="form-control bg-light" id="clave" name="clave" minlength="8" 
                                     maxlength="12" 
                                     pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,12}" title="La contraseña debe tener entre 8 y 16 caracteres, al menos una letra mayúscula, una letra minúscula, un número y un símbolo (@, $, !, %, *, ?, &).
@@ -111,16 +111,16 @@
                             <div class="d-flex flex-column justify-content-center align-items-center">
 
                                 <div class="row" name ="terminos">
-                                    <a name="formularioTerminosYCondiciones" class="link" href="https://www.google.cl">Leer Términos y Condiciones</a>
+                                    <a name="formularioTerminosYCondiciones" class="link fs-4" href="https://www.google.cl">Leer Términos y Condiciones</a>
                                 </div>   
 
                                 <div name="formularioAceptacionTerminos" class="row form-check">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" style="border: 2px solid gray;" type="checkbox" name="AceptoTerminos" required> Acepto Término y Condiciones
+                                    <label class="form-check-label fs-3">
+                                        <input class="form-check-input fs-3" style="border: 2px solid gray;" type="checkbox" name="AceptoTerminos" required> Acepto Término y Condiciones
                                     </label>
                                 </div>
 
-                                <button name="btnInscripcionFormulario" type="submit" class=" row btn btn-primary btn-lg w-50 " id="btnIncripcion">Inscribirme</button>
+                                <button name="btnInscripcionFormulario" type="submit" class=" row btn btn-primary btn-lg w-50 fs-3 fw-bold " id="btnIncripcion">Inscribirme</button>
                             </div>
                         </form>   
                     </div>
@@ -135,7 +135,7 @@
         <section name="indexInvitacion" class="container-fluid mb-2 mt-2">
             <div class=" d-flex flex-column">
                 <div class="row" >
-                    <div class="col-md-7 col-12 " style="height: 75vh;" >
+                    <div class="col-md-7 d-flex justify-content-center " style="height: 75vh;" >
                         <img class="img-fluid h-100" src="Imagenes/index/indexLibertad.png" alt="mujer estirando los brazos en libertad">
                     </div>
                     <div class="col-md-5 col-12 d-flex align-items-center">
