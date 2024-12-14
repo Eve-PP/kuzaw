@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Insertar el Navbar
         const navbar = tempElement.querySelector("#navbarProceso");
         if (navbar) {
-          document.getElementById("navbar_conteiner").appendChild(navbar);
+          document.getElementById("contenedor_navbar").appendChild(navbar);
         }
   
         // Insertar el Menú Lateral

@@ -12,50 +12,7 @@
 
 
 <body class="container-fluid d-flex flex-column min-vh-100 p-0">
-    <header class="container-fluid flex-grow-0 p-0" style="height: 6rem;">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-            <div class="container-fluid">
-                
-                <a class="navbar-brand" href="../index.html">
-                    <img src="../Imagenes/index/logo.png" alt="Avatar Logo" class="img-fluid"> 
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-
-              <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ms-auto align-items-center fs-4">
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">INICIO</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../quienesSomos.html">QUIENES SOMOS</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link bi bi-whatsapp b fs-1" href="https://web.whatsapp.com/"></a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <button class="nav-link bi bi-person-circle fs-1" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                            <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="../login.html">Iniciar Sesión</a></li>
-                                <li><a class="dropdown-item" href="../index.html">Inscribirme</a></li>
-                            
-                            </ul>
-                    </li>
-                    
-                </ul>
-
-              </div>
-            </div>
-          </nav>
-      
-    </header>
+    <header class="container-fluid flex-grow-0 p-0" style="height: 6rem;" id="contenedor_navbar"> </header>
 
     <main class="container-fluid d-flex flex-column flex-grow-1">
         <div class="row align-items-center" style="height: 10vh;">
@@ -103,48 +60,13 @@
 
 </main>
 
-
-<!--  menú lateral -->
-<button class="btn btn-primary position-fixed top-50 start-0 translate-middle-y" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu">
-    <i class="bi bi-list fs-3"></i>
-  </button>
-
-  <div class="offcanvas offcanvas-start bg-transparent" tabindex="-1" id="sideMenu" aria-labelledby="sideMenuLabel">
+<div id="contenedor_menu_lateral"> </div>  
+<script src="../componentesProcesoInscripcion/componentesProcesoInscripcion.js">    </script>
     
-    <div class="offcanvas-body">
-      <ul class="list-group">
-        <li class="list-group-item"><a href="../Perfil/MiCalendario.html" class="text-decoration-none">Calendario</a></li>
-        <li class="list-group-item"><a href="../Perfil/Perfil.html" class="text-decoration-none">Datos de Usurio</a></li>
-   
-      </ul>
-    </div>
-  </div>
+
 
 <footer class="bg-dark" style="height: 5%;">Footer
 </footer>
     
 </body>
 </html>
-    
-
-
-
-        <div class="row">
-        
-            <div class="col-md-7">
-                 
-            </div>
-            
-            <div class=" col-md-5 ">
-                <div class="row">
-                    
-                </div>
-                <div class="row">
-                    
-                </div>                                
-            </div>
-
-        </div>
-                
-    </main>
-    

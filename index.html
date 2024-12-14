@@ -8,11 +8,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <style>
+  <!--style>
     html {
      scroll-behavior: auto; /* Elimina el desplazamiento suave */
    }
- </style>
+ </style-->
 
 
 </head>
@@ -103,7 +103,7 @@
                                 </div>
                             </div>
 
-                            <div class="row" name="contraseña">
+                            <div class="row flex-wrap" name="contraseña">
                                 <label class="col-md-3 fs-3" for="pwd">Contraseña:</label>
                                 <div class=" col-md-9 fs-3 flex-grow-1">
                                     <input type="password" class="form-control bg-light" id="clave" name="clave" minlength="8" 
@@ -168,9 +168,10 @@
     
 
         <section name="indexServicios" class="container-fluid mb-2 mt-2" id="servicios">
-            <div class="d-flex flex-column text-primary m-5 p-5">
+            <div class="d-flex flex-column text-primary m-2 p-2">
+                <div class="row" style="height: 6rem;"></div>
                 <div class="row text-center" >
-                    <h1 class="display-1 fw-bold">SERVICIOS</h1>
+                    <h1 class="display-1 fw-bold text-center">SERVICIOS</h1>
                 </div>
                 <div class="row fs-3 text-center fw-bold" >
                     <div class="col-md-3 p-3">
@@ -215,10 +216,9 @@
         </section>
 
 
-
-
         <section name="indexFortalezas" class="container-fluid mb-2 mt-2" id="fortalezas">
         <div class="d-flex flex-column text-primary">
+            <div class="row" style="height: 6rem;"></div>
             <div class="row text-center pt-3">
                <p class="display-3 pe-5 ps-5 fw-bold" style="color: blueviolet;">"La principal diferencia entre el ser humano y las máquinas, radica en nuestra capacidad de desición lo que corresponde a una voluntad"</p>
             </div>
@@ -262,6 +262,7 @@
 
 
         <section name="indexProceso" class="container-fluid" id="proceso">
+            <div class="row" style="height: 6rem;"></div>
             <div class="row" >
                 <h1 class="display-1 fw-bold">ES TAN FACIL...</h1>
             </div>
@@ -287,9 +288,8 @@
         </section>
     
     
-    
-
         <section name="indexInformacion" class="container-fluid mb-5 mt-5" id="informacion">
+            <div class="row" style="height: 6rem;"></div>
             <div class=" d-flex flex-column text-primary">
                 <div class="row" style="height: 10vh;">
                     <h1 class="display-1 fw-bold">Y COMO LO HACEMOS</h1>
@@ -307,7 +307,7 @@
         
                     </div>
                     
-                    <div class="col-md-6"style="height: 80vh;" >
+                    <div class="col-md-6"style="height: 75vh;" >
                         <img class="img-fluid h-100" src="./Imagenes/index/indexInformacion2.png" alt="diagrama">
                     </div>
                 </div>
@@ -323,7 +323,7 @@
 
         <section name="indexPreguntas" class="container-fluid mb-2 mt-2" id="preguntas">
             <div class="d-flex flex-column">
-
+                <div class="row" style="height: 6rem;"></div>
                 <div class="row h-25">
                     <div class="col-md-4">
                         <img class="img-fluid" src="./Imagenes/index/indexPreguntas.png" alt="computador y compras">
@@ -335,35 +335,35 @@
                 </div>
 
                 <div class="row h-75">
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-4">
                         <div class="d-flex flex-column">
                             <div class="d-flex flex-column m-1 p-1 border border-success border-5">
-                                <p class="fs-3"> Pregunta 1</p>
+                                <p class="fs-3">Pregunta 1</p>
                                 <hr class="border-2 border-success border-5">
-                                <p class="fs-5"> Respuesta 1</p>
+                                <p class="fs-5">Respuesta 1</p>
                             </div>
                             <div class="d-flex flex-column m-1 p-1 border border-success border-5">
-                                <p class="fs-3"> Pregunta 2</p>
+                                <p class="fs-3">Pregunta 2</p>
                                 <hr class="border-2 border-success border-5">
-                                <p class="fs-5"> Respuesta 2</p>
+                                <p class="fs-5">Respuesta 2</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-4">
                         <div class="d-flex flex-column">
-                            <div class="d-flex flex-column mt-1 mb-1 p-1 border border-success border-5">
+                            <div class="d-flex flex-column m-1 p-1 border border-success border-5">
                                 <p class="fs-3"> Pregunta 3</p>
                                 <hr class="border-2 border-success border-5">
                                 <p class="fs-5"> Respuesta 3</p>
                             </div>
-                            <div class="d-flex flex-column mt-1 mb-1 mb-1 p-1 border border-success border-5">
+                            <div class="d-flex flex-column m-1 p-1 border border-success border-5">
                                 <p class="fs-3"> Pregunta 4</p>
                                 <hr class="border-2 border-success border-5">
                                 <p class="fs-5"> Respuesta 4</p>
                             </div>
                         </div>
                     </div> 
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-4">
                         <div class="d-flex flex-column">
                             <div class="d-flex flex-column m-1 p-1 border border-success border-5">
                                 <p class="fs-3"> Pregunta 5</p>
