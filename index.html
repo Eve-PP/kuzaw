@@ -8,7 +8,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  
+  <style>
+    html {
+     scroll-behavior: auto; /* Elimina el desplazamiento suave */
+   }
+ </style>
 
 
 </head>
@@ -33,11 +37,11 @@
                 <ul class="navbar-nav ms-auto align-items-center fs-4">
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">INICIO</a>
+                        <a class="nav-link" href="#inicio">INICIO</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="quienesSomos.html">QUIENES SOMOS</a>
+                        <a class="nav-link" href="#presentacion">QUIENES SOMOS</a>
                     </li>
 
                     <li class="nav-item">
@@ -48,7 +52,7 @@
                         <button class="nav-link bi bi-person-circle fs-1" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
                             <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
                                 <li><a class="dropdown-item" href="login.html">Iniciar Sesión</a></li>
-                                <li><a class="dropdown-item" href="index.html">Inscribirme</a></li>
+                                <li><a class="dropdown-item" href="inicio">Inscribirme</a></li>
                             
                             </ul>
                     </li>
@@ -63,7 +67,8 @@
 
     <main class="container-fluid  d-flex flex-column">
 
-        <section name="indexInscripcion" class="container-fluid mb-2 mt-2">
+        <section name="indexInscripcion" class="container-fluid mb-2 mt-2" id="inicio">
+            <div class="row" style="height: 6rem;"></div>
 
             <div class="row " >
                 <div class="col-md-5 d-flex flex-column justify-content-around">
@@ -125,15 +130,17 @@
                         </form>   
                     </div>
                 </div>
-                <div class="col-md-7 d-flex" style="height: 90vh;">
+                <div class="col-md-7 d-flex" style="height: auto;">
                     <img class="img-fluid"  id="imgLogo" src="Imagenes/index/indexInscripcion.png" alt="mujer inscribiendose en Kuzaw"> 
                 </div>
             </div>
+            <div class="row" style="height: 6rem;"></div>
         </section>
 
 
-        <section name="indexInvitacion" class="container-fluid mb-2 mt-2">
+        <section name="indexInvitacion" class="container-fluid mb-2 mt-2" id="presentacion">
             <div class=" d-flex flex-column">
+                <div class="row" style="height: 6rem;"></div>
                 <div class="row" >
                     <div class="col-md-7 d-flex justify-content-center " style="height: 75vh;" >
                         <img class="img-fluid h-100" src="Imagenes/index/indexLibertad.png" alt="mujer estirando los brazos en libertad">
@@ -160,7 +167,7 @@
         </section>
     
 
-        <section name="indexServicios" class="container-fluid mb-2 mt-2" >
+        <section name="indexServicios" class="container-fluid mb-2 mt-2" id="servicios">
             <div class="d-flex flex-column text-primary m-5 p-5">
                 <div class="row text-center" >
                     <h1 class="display-1 fw-bold">SERVICIOS</h1>
@@ -210,7 +217,7 @@
 
 
 
-        <section name="indexFortalezas" class="container-fluid mb-2 mt-2">
+        <section name="indexFortalezas" class="container-fluid mb-2 mt-2" id="fortalezas">
         <div class="d-flex flex-column text-primary">
             <div class="row text-center pt-3">
                <p class="display-3 pe-5 ps-5 fw-bold" style="color: blueviolet;">"La principal diferencia entre el ser humano y las máquinas, radica en nuestra capacidad de desición lo que corresponde a una voluntad"</p>
@@ -254,7 +261,7 @@
         </section>
 
 
-        <section name="indexProceso" class="container-fluid ">
+        <section name="indexProceso" class="container-fluid" id="proceso">
             <div class="row" >
                 <h1 class="display-1 fw-bold">ES TAN FACIL...</h1>
             </div>
@@ -267,7 +274,7 @@
                         <img class="img-fluid" style="height: 15%;" src="./Imagenes/index/indexProcesoFlecha.png" alt="flecha hacia abajo con estilo">
                         <h1 class="fw-bold"> COMIENZA A GANAR</h1>
                         <h1>Recibe tus pagos, todas las semanas</h1>
-                        <a type="button" class="btn btn-success btn-lg w-50" href="/index.html">ALLA VOY</a>
+                        <a type="button" class="btn btn-success btn-lg w-50" href="#inicio">ALLA VOY</a>
                     </div>
                 </div>
     
@@ -281,16 +288,8 @@
     
     
     
-    
 
-
-
-
-        
-
-
-
-        <section name="indexInformacion" class="container-fluid mb-5 mt-5">
+        <section name="indexInformacion" class="container-fluid mb-5 mt-5" id="informacion">
             <div class=" d-flex flex-column text-primary">
                 <div class="row" style="height: 10vh;">
                     <h1 class="display-1 fw-bold">Y COMO LO HACEMOS</h1>
@@ -322,7 +321,7 @@
 
 
 
-        <section name="indexPreguntas" class="container-fluid mb-2 mt-2">
+        <section name="indexPreguntas" class="container-fluid mb-2 mt-2" id="preguntas">
             <div class="d-flex flex-column">
 
                 <div class="row h-25">
