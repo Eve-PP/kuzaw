@@ -124,11 +124,15 @@ function mostrarResultados() {
   if (porcentaje >= 80) {
     approvalIcon.innerHTML = `<i class="bi bi-check-circle-fill display-1 text-success"></i>`;
     approvalText.innerText = "¡Buen trabajo, has aprobado!";
-    btnFinTest.innerHTML = `<a  id="continuar-a-paso-5" type="button" class="btn btn-primary btn-lg w-25" href="../Paso5-Fin/enunciadoFinal.html">Siguiente</a>`;  
+    btnFinTest.setAttribute("href", "../Paso5-Fin/enunciadoFinal.html")
+    //btnFinTest.innerHTML = `<a  id="continuar-a-paso-5" type="button" class="btn btn-primary btn-lg w-50" href="">Siguiente</a>`;  
     } else {
     approvalIcon.innerHTML = `<i class="bi bi-x-circle-fill display-1 text-danger" ></i>`;
     approvalText.innerText = "No aprobaste.";
-    btnFinTest.innerHTML = `<a  id="continuar-a-paso-5" type="button" class="btn btn-primary btn-lg w-25" href="../Paso3-Capacitacion/capacitacionVideo.html"> A Estudiar...</a>`;  
+    btnFinTest.setAttribute("href", "../Paso3-Capacitacion/capacitacionVideo.html")
+    btnFinTest.innerHTML = "Volver a Capacitación";  
+
+    //btnFinTest.innerHTML = `<a  id="continuar-a-paso-5" type="button" class="btn btn-primary btn-lg w-50" href="../Paso3-Capacitacion/capacitacionVideo.html">Volver a Capacitación</a>`;  
 
   }
 
