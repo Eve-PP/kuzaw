@@ -39,6 +39,7 @@ const percentageText = document.getElementById("percentage");
 const puntajeTotalText = document.getElementById("puntaje-total");
 const approvalText = document.getElementById("approval");
 const approvalIcon = document.getElementById("approval-icon");
+const btnFinTest = document.getElementById("continuar-a-paso-5")
 
 let respuestaSeleccionada = null;
 
@@ -119,11 +120,17 @@ function mostrarResultados() {
   percentageText.innerText = `${porcentaje}%`;
   //percentageText.innerText = `Porcentaje: ${porcentaje}%`;
   puntajeTotalText.innerText = `PuntajeTotal: ${totalPreguntas}`;
-  approvalText.innerText = porcentaje >= 80 ? "¡Buen trabajo, has aprobado!" : "No aprobaste.";
+  //approvalText.innerText = porcentaje >= 80 ? "¡Buen trabajo, has aprobado!" : "No aprobaste.";
   if (porcentaje >= 80) {
     approvalIcon.innerHTML = `<i class="bi bi-check-circle-fill display-1 text-success"></i>`;
-  } else {
+    approvalText.innerText = "¡Buen trabajo, has aprobado!";
+    } else {
     approvalIcon.innerHTML = `<i class="bi bi-x-circle-fill display-1 text-danger" ></i>`;
+    approvalText.innerText = "No aprobaste.";
+    btnFinTest.innerHTML = `<a  id="continuar-a-paso-5" type="button" class="btn btn-primary btn-lg w-25" href="../Paso3-Capacitacion/capacitacionVideo.html"> A Estudiar...</a>`;
+  
+    
+
   }
 
 
