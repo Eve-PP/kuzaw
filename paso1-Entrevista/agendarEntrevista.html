@@ -92,13 +92,13 @@
     <div class="row flex-grow-1">
         <div class="col-md-6 d-flex flex-column flex-grow-1">
           
-                <div class="row text-center h-25">
+                <div class="row text-center" style="height: 25%;" id="tituloAgendamiento">
                     <h2 class="display-3 fw-bold" style="color: orange;"> Lo primero es lo primero,</h2>
                     <h1 class="display-1 fw-bold" style="color: blue;"> conozcamonos</h1>
                 </div>
 
-                <div class="row h-75 m-5">
-                    <div><!--para contenedor horas-->
+                <div class="row m-5" style="height: 75%;">
+                    <div class="d-flex flex-column justify-content-center"><!--para contenedor horas-->
                         <div id="hoursContainer" class=" text-center d-none">
                             <h4>Horas disponibles para: <span id="selectedDate"></span></h4>
                             <ul id="availableHours" class="list-group mx-auto" style="max-width: 300px;">
@@ -167,6 +167,9 @@
             });
       
             hoursContainer.removeClass('d-none'); // Mostrar el contenedor de horas
+            
+            const tituloAgendamientoContainer = $('#tituloAgendamiento');
+            tituloAgendamientoContainer.addClass('d-none'); // Mostrar el contenedor de horas
           });
       
           // Capturar clic en el botón de selección de hora
