@@ -1,14 +1,19 @@
 //medidor de puntaje
 export let puntosAcumulados = 0;
+module.exports.variable1 = 10;
+
 
 //Funcion pregunta 1
 document.getElementById("respuesta1").addEventListener("click", function () {
+
+  console.log("Puntos iniciales:" + puntosAcumulados);
 
   const respuestaSeleccionada = document.querySelector('input[name="opciones1"]:checked');
   const estadoRespuesta = document.getElementById("estadoRespuesta");
 
   if (!respuestaSeleccionada) {
-    estadoRespuesta.textContent = "Por favor, selecciona una respuesta.";
+    estadoRespuesta.textContent = "Por favor, selecciona una opcion.";
+    console.log("Puntos posibles: 0 o 1");
     return;
   }
 
@@ -20,6 +25,7 @@ document.getElementById("respuesta1").addEventListener("click", function () {
 
   } else {
     estadoRespuesta.textContent = "Incorrecto. No seleccionaste la respuesta correcta";
+    console.log("Puntos perdidos: 1");
   }
 });
 
